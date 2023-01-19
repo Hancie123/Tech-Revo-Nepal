@@ -13,4 +13,8 @@ class indexcontroller extends Controller
     public function login(){
         return view('login');
     }
+
+    public function registration(){
+        return view('registration');
+    }
 }

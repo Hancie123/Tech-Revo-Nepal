@@ -1,7 +1,8 @@
 @stack('title')
  <!-- Favicons -->
- <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="{{asset('icons\apple-touch-icon.png')}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{asset('icons\android-chrome-192x192.png')}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{asset('icons\android-chrome-512x512.png')}}">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +15,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- Template Main CSS File -->
   <link href={{asset('assets\main.css')}} rel="stylesheet">
@@ -66,7 +68,7 @@
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#login">Login</a></li>
+          <li><a href="/login">Login</a></li>
         </ul>
       </nav><!-- .navbar -->
 
