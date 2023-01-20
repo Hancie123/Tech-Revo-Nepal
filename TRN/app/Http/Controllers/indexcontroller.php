@@ -14,7 +14,7 @@ class indexcontroller extends Controller
         return view('login');
     }
 
-    public function registration(Request $request){
+    public function logincheck(Request $request){
         
         $request->validate(
             [
