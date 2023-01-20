@@ -38,6 +38,7 @@
                                 </span>
                                 <div class="mb-3"><button class="btn btn-success d-block w-100" type="submit">Login</button></div>
                                 <p class="text-muted">Forgot your password?</p>
+                                <a href="/registration">No account? Register here!</a>
                             </form>
 
 
