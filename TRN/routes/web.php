@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexcontroller;
+use App\Models\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,12 @@ Route::get('/',[indexcontroller::class,'index']);
 
 Route::get('/login',[indexcontroller::class,'login']);
 Route::post('/login',[indexcontroller::class,'logincheck']);
+
+Route::get('/admin',function(){
+
+    $admin=Admin::all();
+    echo "<pre>";
+    print_r($admin->toArray());
+
+
+});
