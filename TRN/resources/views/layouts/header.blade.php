@@ -19,6 +19,7 @@
 
   <!-- Template Main CSS File -->
   <link href={{asset('assets\main.css')}} rel="stylesheet">
+  <link rel="stylesheet" href={{asset('cssfiles\w3.css')}}>
 
 <!-- ======= Header ======= -->
 <section id="topbar" class="topbar d-flex align-items-center">
@@ -44,7 +45,7 @@
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>

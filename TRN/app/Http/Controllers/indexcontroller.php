@@ -14,7 +14,14 @@ class indexcontroller extends Controller
         return view('login');
     }
 
-    public function registration(){
-        return view('registration');
+    public function registration(Request $request){
+        
+        $request->validate(
+            [
+                'email'=>'required|email',
+                'password'=>'required',
+            ]
+            );
+            print_r($request->all());
     }
 }

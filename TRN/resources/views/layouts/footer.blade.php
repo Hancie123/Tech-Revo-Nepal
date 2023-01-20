@@ -4,10 +4,11 @@
 <div class="container">
   <div class="row gy-4">
     <div class="col-lg-5 col-md-12 footer-info">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <span>TRN</span>
       </a>
-      <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+      <p>An excellent IT company to work with for creating Android applications.
+         desktop applications as well as web applications.</p>
       <div class="social-links d-flex mt-4">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -41,11 +42,10 @@
     <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
       <h4>Contact Us</h4>
       <p>
-        A108 Adam Street <br>
-        New York, NY 535022<br>
-        United States <br><br>
-        <strong>Phone:</strong> +1 5589 55488 55<br>
-        <strong>Email:</strong> info@example.com<br>
+        New Baneshwor,Kathmandu<br>
+        Shankamul<br><br>
+        <strong>Phone:</strong> +977 9825915122<br>
+        <strong>Email:</strong> techrevolutionnepal@gmail.com<br>
       </p>
 
     </div>
