@@ -49,6 +49,11 @@
         </div>
     </section>
 
+<script>
+document.addEventListener("contextmenu", function (e){
+    e.preventDefault();
+}, false);
+</script>
 
 
 @include('layouts\footer')
