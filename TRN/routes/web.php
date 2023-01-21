@@ -29,4 +29,5 @@ Route::get('/admin/delete/{id}',[admincontroller:: class,'delete'])->name('admin
 Route::get('/customerview',[admincontroller::class,'viewadmin']);
 
 
-Route::get('/home/dashboard',[indexcontroller::class,'dashboard']);
+Route::get('/home/dashboard',[AdminAuthController::class,'dashboard'])->middleware('isLoggedIn');
+Route::get('/home/dashboard/logout',[AdminAuthController::class,'logout']);

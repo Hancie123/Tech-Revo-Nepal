@@ -23,7 +23,7 @@ class AdminAuthController extends Controller
             if($admin){
 
                 if(Hash::check($request->password, $admin->password)){
-                    $request->session()->put('loginid',$admin->admin_id);
+                    $request->session()->put('Loginid',$admin->admin_id);
                     return redirect('/home/dashboard');
                     
 
@@ -37,5 +37,26 @@ class AdminAuthController extends Controller
             else{
                 return back()->with('fail','The user account not found!');
             }
+    }
+
+    public function dashboard(){
+        $data=array();
+        if(Session::has('Loginid')){
+            $data=admin::where('admin_id','=',Session::get('Loginid'))->first();
+        }
+        // else{
+        //     return redirect('login');
+        // }
+        return view('home/dashboard',compact('data'));
+    }
+
+
+    public function logout(){
+        if(Session::has('Loginid')){
+            Session::pull('Loginid');
+            return redirect('login');
+        }
+
+
     }
 }
