@@ -29,11 +29,4 @@ Route::get('/admin/delete/{id}',[admincontroller:: class,'delete'])->name('admin
 Route::get('/customerview',[admincontroller::class,'viewadmin']);
 
 
-Route::get('/admin',function(){
-
-    $admin=Admin::all();
-    echo "<pre>";
-    print_r($admin->toArray());
-
-
-});
+Route::get('/home/dashboard',[indexcontroller::class,'dashboard']);

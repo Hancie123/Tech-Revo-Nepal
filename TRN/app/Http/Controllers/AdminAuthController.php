@@ -24,6 +24,7 @@ class AdminAuthController extends Controller
 
                 if(Hash::check($request->password, $admin->password)){
                     $request->session()->put('loginid',$admin->admin_id);
+                    return redirect('/home/dashboard');
                     
 
                 }
