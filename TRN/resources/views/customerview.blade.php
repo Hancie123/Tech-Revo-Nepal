@@ -21,7 +21,11 @@
 <td>{{$data->mobileno}}</td>
 <td>{{$data->address}}</td>
 
-<td><button class="btn btn-danger">Delete</button></td>
+<td>
+    <a href="{{url('admin/delete')}}/{{$data->admin_id}}">
+    <button class="btn btn-danger">Delete</button>
+</a>
+</td>
 </tr>
 @endforeach
 </tbody>

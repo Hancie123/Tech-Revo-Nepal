@@ -23,7 +23,7 @@ Route::post('/login',[indexcontroller::class,'logincheck']);
 
 Route::get('/registration',[admincontroller::class,'admin']);
 Route::post('/registration',[admincontroller::class,'registrationcheck']);
-
+Route::get('/admin/delete/{id}',[admincontroller:: class,'delete'])->name('admin.delete');
 
 Route::get('/customerview',[admincontroller::class,'viewadmin']);
 

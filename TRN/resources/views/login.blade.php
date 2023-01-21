@@ -24,13 +24,13 @@
 
                             <form class="text-center" action="{{url('/')}}\login" method="post">
                                 @csrf
-                                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                                <div class="mb-3"><input class="form-control" type="email" name="email" value="{{old('email')}}"  placeholder="Email"></div>
                                 <span class="text-danger">
                                     @error('email')
                                     {{$message}}
                                     @enderror
                                 </span>
-                                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                                <div class="mb-3"><input class="form-control" type="password" name="password" value="{{old('password')}}"   placeholder="Password"></div>
                                 <span class="text-danger">
                                     @error('password')
                                     {{$message}}

@@ -32,6 +32,7 @@ class admincontroller extends Controller
         $admin->address=$request['address'];
         $admin->password=md5($request['password']);
         $admin->save();
+        return redirect()->back();
 
     }
 
@@ -40,5 +41,15 @@ class admincontroller extends Controller
         $data=compact('admin');
         return view('customerview')->with($data);
 
+    }
+
+    public function delete($id){
+        
+        $admin=admin::find($id);
+        if(!is_null($admin)){
+            $admin->delete();
+        }
+        return redirect('customerview');
+        
     }
 }
