@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexcontroller;
 use App\Http\Controllers\admincontroller;
+use App\Http\Controllers\AdminAuthController;
 use App\Models\Admin;
 
 /*
@@ -19,7 +20,7 @@ use App\Models\Admin;
 Route::get('/',[indexcontroller::class,'index']);
 
 Route::get('/login',[indexcontroller::class,'login']);
-Route::post('/login',[indexcontroller::class,'logincheck']);
+Route::post('/login',[AdminAuthController::class,'logincheck']);
 
 Route::get('/registration',[admincontroller::class,'admin']);
 Route::post('/registration',[admincontroller::class,'registrationcheck']);

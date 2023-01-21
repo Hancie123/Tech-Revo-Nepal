@@ -14,14 +14,5 @@ class indexcontroller extends Controller
         return view('login');
     }
 
-    public function logincheck(Request $request){
-        
-        $request->validate(
-            [
-                'email'=>'required|email',
-                'password'=>'required',
-            ]
-            );
-            print_r($request->all());
-    }
+    
 }

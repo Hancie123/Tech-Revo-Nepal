@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use Hash;
+
 
 class admincontroller extends Controller
 {
@@ -13,6 +15,7 @@ class admincontroller extends Controller
     }
 
     public function registrationcheck(Request $request){
+        //validation
         $request->validate([
             'name'=>'required',
             'email'=>'required|email',
@@ -30,12 +33,19 @@ class admincontroller extends Controller
         $admin->email=$request['email'];
         $admin->mobileno=$request['mobile'];
         $admin->address=$request['address'];
-        $admin->password=md5($request['password']);
+        $admin->password=Hash::make($request['password']);
         $admin->save();
-        return redirect()->back();
+        if($admin){
+            return back()->with('success','You have registered successfully');
+        }
+        else {
+            return back()->with('fail','Something wrong');
+        }
+        
 
     }
 
+    //view function
     public function viewadmin(){
         $admin=admin::all();
         $data=compact('admin');
@@ -43,6 +53,7 @@ class admincontroller extends Controller
 
     }
 
+    //delete function
     public function delete($id){
         
         $admin=admin::find($id);

@@ -3,11 +3,11 @@
 @include('layouts\header')
 <link rel="stylesheet" href={{asset('cssfiles\login.css')}}>
 
-<section class="position-relative py-4 py-xl-5">
+<section class="position-relative py-4 py-xl-5 w3-animate-top">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2>Log in</h2>
+                    <h2>TRN Login System</h2>
                     <p class="w-lg-50">Please enter your email and password!</p>
                 </div>
             </div>
@@ -23,19 +23,40 @@
 
 
                             <form class="text-center" action="{{url('/')}}\login" method="post">
+                                @if(Session::has('success'))
+                                <div class="alert  alert-success">{{Session::get('success')}}</div>
+                                @endif
+                                @if(Session::has('fail'))
+                                <div class="alert  alert-danger">{{Session::get('fail')}}</div>
+                                @endif
                                 @csrf
-                                <div class="mb-3"><input class="form-control" type="email" name="email" value="{{old('email')}}"  placeholder="Email"></div>
+
+                                
+                                <div class="mb-3 w3-animate-left">
+                                <div class="input-field">
+                                <input type="text" name="email" required spellcheck="false"> 
+                                <label>Enter email</label>
+                                </div>
                                 <span class="text-danger">
                                     @error('email')
                                     {{$message}}
                                     @enderror
                                 </span>
-                                <div class="mb-3"><input class="form-control" type="password" name="password" value="{{old('password')}}"   placeholder="Password"></div>
+                            </div>
+                                
+                                <div class="mb-3 w3-animate-right">
+                                <div class="input-field">
+                                <input type="password" name="password" required spellcheck="false"> 
+                                <label>Enter password</label>
+                                </div>
+                            
                                 <span class="text-danger">
                                     @error('password')
                                     {{$message}}
                                     @enderror
                                 </span>
+                            </div>
+                                
                                 <div class="mb-3"><button class="btn btn-success d-block w-100" type="submit">Login</button></div>
                                 <p class="text-muted">Forgot your password?</p>
                                 <a href="/registration">No account? Register here!</a>
@@ -55,6 +76,51 @@ document.addEventListener("contextmenu", function (e){
     e.preventDefault();
 }, false);
 </script>
+
+
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+
+.input-field{
+  position: relative;
+}
+.input-field input{
+    width: 22em;
+  height: 2.5em;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 2px solid rgb(6, 76, 26);
+  background: transparent;
+  color: black;
+  outline: none;
+}
+.input-field label{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: rgb(10, 8, 8);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+input:focus{
+  border: 2px solid rgb(6, 76, 26);
+}
+input:focus ~ label,
+input:valid ~ label{
+  top: 0;
+  left: 15px;
+  font-size: 16px;
+  padding: 0 2px;
+  background: white;
+}
+
+</style>
 
 
 @include('layouts\footer')

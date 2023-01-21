@@ -11,6 +11,12 @@
                         <h2 class="text-dark mb-4"><bold>Create an Account!</bold></h2>
                     </div>
                     <form action="{{url('/')}}\registration" class="user" method="post">
+                        @if(Session::has('success'))
+                        <div class="alert alert-success">{{Session::get('success')}}</div>
+                        @endif
+                        @if(Session::has('fail'))
+                        <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                        @endif
                         @csrf
                         <div class="mb-3"><input class="form-control form-control-user" name=name type="text" placeholder="Name">
                         <span class="text-danger">

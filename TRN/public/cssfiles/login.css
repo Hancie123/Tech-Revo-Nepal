@@ -7,7 +7,7 @@
     font-size: var(--bs-icon-size);
     width: calc(var(--bs-icon-size) * 2);
     height: calc(var(--bs-icon-size) * 2);
-    color: var(--bs-primary);
+    color: var(--bs-success);
   }
   
   .bs-icon-xs {
@@ -34,16 +34,16 @@
   
   .bs-icon.bs-icon-primary {
     color: var(--bs-white);
-    background: var(--bs-primary);
+    background: var(--bs-success);
   }
   
   .bs-icon.bs-icon-primary-light {
-    color: var(--bs-primary);
-    background: rgba(var(--bs-primary-rgb), .2);
+    color: var(--bs-success);
+    background: rgba(var(--bs-success-rgb), .2);
   }
   
   .bs-icon.bs-icon-semi-white {
-    color: var(--bs-primary);
+    color: var(--bs-success);
     background: rgba(255, 255, 255, .5);
   }
   
