@@ -87,31 +87,44 @@
 
         <div class="section-header">
           <h2>About Us</h2>
-          <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
+          <p>Tech Revo is a IT company based in Nepal that was founded in 2022. They specialize in creating 
+            a wide range of applications such as android, desktop and web applications. They have a 
+            team of experienced professionals led by CEO Hancie Phago, that provides services like 
+            website and software development, mobile app development, and digital marketing. </p>
         </div>
 
         <div class="row gy-4">
           <div class="col-lg-6">
-            <h3>Voluptatem dignissimos provident quasi corporis</h3>
+            <h3>Tech Revo Nepal</h3>
             <img src="assets/img/TRN.bmp" class="img-fluid rounded-4 mb-4" alt="">
-            <p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.</p>
-            <p>Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique sit. Accusantium sed ut omnis beatae neque deleniti repellendus.</p>
+            <p>Tech Revo Nepal is a relatively new IT company in Nepal that specializes in creating Android,
+               desktop, and web applications. The company was established in 2022 and is led by a team of
+                experienced and knowledgeable professionals, including Hancie Phago, Nitesh Hamal, Aveshesh 
+                KC, and Ajaya Timsina. The CEO of the company is Hancie Phago. The company has a team 
+                of skilled developers who are well-versed in the latest technologies and programming 
+                languages, such as Java, Python, C#, and Php. They have experience in creating a wide
+                 range of applications, including business apps, e-commerce apps, gaming apps, and 
+                 more. They also offer a wide range of services such as website development, software
+                  development, mobile app development, digital marketing, and more. If you are looking 
+                  for a reliable and professional IT company in Nepal to work with for your Android,
+                   desktop, or web application development needs, Tech Revo Nepal is an excellent choice.</p>
           </div>
           <div class="col-lg-6">
             <div class="content ps-0 ps-lg-5">
               <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+              Tech Revo is a IT company based in Nepal that was founded in 2022. They specialize
+               in creating a wide range of applications such as android, desktop and web applications. 
+               They have a team of experienced professionals led by CEO Hancie Phago, that provides 
+               services like :
               </p>
               <ul>
-                <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Web development service</li>
+                <li><i class="bi bi-check-circle-fill"></i> Android development service</li>
+                <li><i class="bi bi-check-circle-fill"></i> Graphic design service</li>
+                <li><i class="bi bi-check-circle-fill"></i> Desktop application development service</li>
+                <li><i class="bi bi-check-circle-fill"></i> iOS application development services</li>
               </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-              </p>
+              
 
               <div class="position-relative mt-4">
                 <img src="assets/img/TRN.bmp" class="img-fluid rounded-4" alt="">
