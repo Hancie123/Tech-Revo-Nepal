@@ -25,7 +25,7 @@ Route::get('/registration',[admincontroller::class,'admin']);
 Route::post('/registration',[admincontroller::class,'registrationcheck']);
 
 
-
+Route::get('/customerview',[admincontroller::class,'viewadmin']);
 
 
 Route::get('/admin',function(){

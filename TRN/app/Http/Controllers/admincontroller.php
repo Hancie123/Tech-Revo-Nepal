@@ -34,4 +34,11 @@ class admincontroller extends Controller
         $admin->save();
 
     }
+
+    public function viewadmin(){
+        $admin=admin::all();
+        $data=compact('admin');
+        return view('customerview')->with($data);
+
+    }
 }
