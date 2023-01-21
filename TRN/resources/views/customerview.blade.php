@@ -9,7 +9,7 @@
 <th>Email</th>
 <th>Mobile No</th>
 <th>Address</th>
-<th>Password</th>
+<th>Action</th>
 </tr>
 </thead>
 <tbody>
@@ -20,8 +20,8 @@
 <td>{{$data->email}}</td>
 <td>{{$data->mobileno}}</td>
 <td>{{$data->address}}</td>
-<td>{{$data->password}}</td>
 
+<td><button class="btn btn-danger">Delete</button></td>
 </tr>
 @endforeach
 </tbody>
