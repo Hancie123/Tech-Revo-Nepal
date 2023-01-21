@@ -43,6 +43,11 @@ class AdminAuthController extends Controller
         $data=array();
         if(Session::has('Loginid')){
             $data=admin::where('admin_id','=',Session::get('Loginid'))->first();
+            Session::put('name',$data->name);
+            Session::put('email',$data->email);
+            Session::put('dob',$data->dob);
+            Session::put('mobileno',$data->mobileno);
+            Session::put('address',$data->address);
         }
         // else{
         //     return redirect('login');
