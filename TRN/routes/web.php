@@ -31,3 +31,4 @@ Route::get('/customerview',[admincontroller::class,'viewadmin']);
 
 Route::get('/home/dashboard',[AdminAuthController::class,'dashboard'])->middleware('isLoggedIn');
 Route::get('/home/dashboard/logout',[AdminAuthController::class,'logout']);
+Route::get('/home/profile',[indexcontroller::class,'profile'])->middleware('isLoggedIn');

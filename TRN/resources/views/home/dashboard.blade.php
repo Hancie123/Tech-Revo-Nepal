@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<html>
+@include("layouts/adminsidemenu")
+@push('title')
+<title>Admin Dashboard</title>
 
-<head>
-    @include('layouts/adminsidemenu')
+<main id="main" class="main">
 
-</head>
-
-<body>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-        </ol>
-    </nav>
-
-
+    <div class="pagetitle">
+        <h1>Dashboard</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
 
 
-</body>
+    <h1>Hancie Phago</h1>
+
+</main>
 
 
-</html>
+
+
+@include("layouts/adminfooter")

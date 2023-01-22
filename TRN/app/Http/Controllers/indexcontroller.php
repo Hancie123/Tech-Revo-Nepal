@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
+use App\Models\Admin;
 
 class indexcontroller extends Controller
 {
@@ -14,6 +16,11 @@ class indexcontroller extends Controller
         return view('login');
     }
 
+    public function profile(){
+        return view('home/profile');
+    }
+
+    
     
 
     
