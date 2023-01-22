@@ -61,7 +61,7 @@
 
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon-box">
-                            <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                            <div class="icon"><i class="bi bi-browser-chrome"></i></div>
                             <h4 class="title"><a href="" class="stretched-link">Web Application</a></h4>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                 <div class="row gy-4">
                     <div class="col-lg-6">
                         <h3>Tech Revo Nepal</h3>
-                        <img src="assets/img/TRN.bmp" class="img-fluid rounded-4 mb-4" alt="">
+                        <img src="assets/img/TRN.jpg" class="img-fluid rounded-4 mb-4" alt="">
                         <p>Tech Revo Nepal is a relatively new IT company in Nepal that specializes in creating Android,
                             desktop, and web applications. The company was established in 2022 and is led by a team of
                             experienced and knowledgeable professionals, including Hancie Phago, Nitesh Hamal, Aveshesh
@@ -131,7 +131,7 @@
 
 
                             <div class="position-relative mt-4">
-                                <img src="assets/img/TRN.bmp" class="img-fluid rounded-4" alt="">
+                                <img src="assets/img/TRN.jpg" class="img-fluid rounded-4" alt="">
                                 <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
                             </div>
                         </div>
@@ -176,27 +176,28 @@
                 <div class="row gy-4 align-items-center">
 
                     <div class="col-lg-6">
-                        <img src="assets/img/stats-img.svg" alt="" class="img-fluid">
+                        <img src="assets/img/Scrum board.gif" alt="" class="img-fluid">
                     </div>
 
                     <div class="col-lg-6">
 
                         <div class="stats-item d-flex align-items-center">
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p><strong>Happy Clients</strong> consequuntur quae diredo para mesta</p>
+                            <p><strong>Happy Clients</strong> We make every clients happy by fulfilling their
+                                requirements</p>
                         </div><!-- End Stats Item -->
 
                         <div class="stats-item d-flex align-items-center">
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+                            <p><strong>Projects</strong> We have completed more than 50 projects within a year.</p>
                         </div><!-- End Stats Item -->
 
                         <div class="stats-item d-flex align-items-center">
-                            <span data-purecounter-start="0" data-purecounter-end="453" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+                            <p><strong>Hours Of Support</strong> We are always ready to support 24 hours</p>
                         </div><!-- End Stats Item -->
 
                     </div>
@@ -209,11 +210,9 @@
         <!-- ======= Call To Action Section ======= -->
         <section id="call-to-action" class="call-to-action">
             <div class="container text-center" data-aos="zoom-out">
-                <a href="https://www.youtube.com/watch?v=UpvNug3zqec&t=90s" class="glightbox play-btn"></a>
+                <a href="https://youtu.be/gRf81OwxRBk" class="glightbox play-btn"></a>
                 <h3>Call To Action</h3>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                    anim id est laborum.</p>
+                <p> We are always ready to help you</p>
                 <a class="cta-btn" href="#">Call To Action</a>
             </div>
         </section><!-- End Call To Action Section -->
@@ -232,11 +231,15 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item  position-relative">
                             <div class="icon">
-                                <i class="bi bi-activity"></i>
+                                <i class="bi bi-pc-display"></i>
                             </div>
-                            <h3>Nesciunt Mete</h3>
-                            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores
-                                iure perferendis tempore et consequatur.</p>
+                            <h3>Desktop Application</h3>
+                            <p>We provide desktop application development service to help clients create
+                                custom desktop applications that are tailored to their specific needs and goals. We
+                                have a
+                                team of skilled developers who are well-versed in the latest technologies and
+                                programming languages, such as C#, Java, and C++. We can create a wide range of
+                                desktop applications, including business apps, gaming apps, and more.</p>
                             <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -244,11 +247,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item position-relative">
                             <div class="icon">
-                                <i class="bi bi-broadcast"></i>
+                                <i class="bi bi-android2"></i>
                             </div>
-                            <h3>Eosle Commodi</h3>
-                            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum
-                                hic non ut nesciunt dolorem.</p>
+                            <h3>Android Application</h3>
+                            <p>We provide android development service to help clients create custom android
+                                applications that are tailored to their specific needs and goals. We have a team of
+                                skilled developers who are well-versed in the latest technologies and programming
+                                languages, such as Java, Flutter, and Dart. We can create a wide range of android
+                                applications, including business apps, e-commerce apps, gaming apps, and more.</p>
                             <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -256,11 +262,15 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item position-relative">
                             <div class="icon">
-                                <i class="bi bi-easel"></i>
+                                <i class="bi bi-palette-fill"></i>
                             </div>
-                            <h3>Ledo Markt</h3>
-                            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id
-                                voluptas adipisci eos earum corrupti.</p>
+                            <h3>Graphic Design</h3>
+                            <p>The company's graphic design service is designed to help clients create visually
+                                appealing designs for their websites and applications. We have a team of skilled
+                                graphic designers who are well-versed in the latest design trends and software, such as
+                                Adobe Photoshop, Illustrator, Blender, and InDesign. We can create logos, brochures,
+                                business
+                                cards, and other marketing materials that are both attractive and effective.</p>
                             <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -268,11 +278,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item position-relative">
                             <div class="icon">
-                                <i class="bi bi-bounding-box-circles"></i>
+                                <i class="bi bi-phone"></i>
                             </div>
-                            <h3>Asperiores Commodit</h3>
-                            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga
-                                sit provident adipisci neque.</p>
+                            <h3>iOS Application</h3>
+                            <p>Our iOS application development services are designed to help clients create custom iOS
+                                applications that are tailored to their specific needs and goals. We have a team of
+                                skilled developers who are well-versed in the latest technologies and programming
+                                languages, such as Swift and Objective-C. We can create a wide range of iOS
+                                applications, including business apps, e-commerce apps, gaming apps, and more.</p>
                             <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -280,11 +293,15 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item position-relative">
                             <div class="icon">
-                                <i class="bi bi-calendar4-week"></i>
+                                <i class="bi bi-browser-edge"></i>
                             </div>
-                            <h3>Velit Doloremque</h3>
-                            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed
-                                animi at autem alias eius labore.</p>
+                            <h3>Web Application</h3>
+                            <p>The company's website design service is designed to help clients create visually
+                                appealing, user-friendly websites that are tailored to their specific needs and goals.
+                                We have a team of skilled designers and developers who are well-versed in the latest
+                                design trends and software, such as HTML, CSS, Bootstrap, React and Javascript. They can
+                                create responsive websites that look great on any device, as well as e-commerce websites
+                                that are easy to navigate and use.</p>
                             <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -292,11 +309,18 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item position-relative">
                             <div class="icon">
-                                <i class="bi bi-chat-square-text"></i>
+                                <i class="bi bi-browser-chrome"></i>
                             </div>
-                            <h3>Dolori Architecto</h3>
-                            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure.
-                                Corrupti recusandae ducimus enim.</p>
+                            <h3>Web Application</h3>
+                            <p>The company's web application development service is designed to help clients create
+                                custom web application
+                                that are tailored to their specific needs and goals. We have a team of skilled
+                                developers who are well-versed in the latest technologies and programming languages,
+                                such as HTML, CSS, JavaScript, and PHP, Laravel, Django, Reat. They can create
+                                responsive
+                                websites that look
+                                great on any device, as well as e-commerce websites that are easy to navigate and use.
+                            </p>
                             <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div><!-- End Service Item -->
@@ -306,160 +330,6 @@
             </div>
         </section><!-- End Our Services Section -->
 
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-header">
-                    <h2>Testimonials</h2>
-                    <p>Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur est eveniet deleniti
-                        fignissimos eos quam</p>
-                </div>
-
-                <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-wrap">
-                                <div class="testimonial-item">
-                                    <div class="d-flex align-items-center">
-                                        <img src="assets/img/testimonials/testimonials-1.jpg"
-                                            class="testimonial-img flex-shrink-0" alt="">
-                                        <div>
-                                            <h3>Saul Goodman</h3>
-                                            <h4>Ceo &amp; Founder</h4>
-                                            <div class="stars">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        <i class="bi bi-quote quote-icon-left"></i>
-                                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
-                                        suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et.
-                                        Maecen aliquam, risus at semper.
-                                        <i class="bi bi-quote quote-icon-right"></i>
-                                    </p>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-wrap">
-                                <div class="testimonial-item">
-                                    <div class="d-flex align-items-center">
-                                        <img src="assets/img/testimonials/testimonials-2.jpg"
-                                            class="testimonial-img flex-shrink-0" alt="">
-                                        <div>
-                                            <h3>Sara Wilsson</h3>
-                                            <h4>Designer</h4>
-                                            <div class="stars">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        <i class="bi bi-quote quote-icon-left"></i>
-                                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum
-                                        quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat
-                                        irure amet legam anim culpa.
-                                        <i class="bi bi-quote quote-icon-right"></i>
-                                    </p>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-wrap">
-                                <div class="testimonial-item">
-                                    <div class="d-flex align-items-center">
-                                        <img src="assets/img/testimonials/testimonials-3.jpg"
-                                            class="testimonial-img flex-shrink-0" alt="">
-                                        <div>
-                                            <h3>Jena Karlis</h3>
-                                            <h4>Store Owner</h4>
-                                            <div class="stars">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        <i class="bi bi-quote quote-icon-left"></i>
-                                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                        veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis
-                                        sint minim.
-                                        <i class="bi bi-quote quote-icon-right"></i>
-                                    </p>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-wrap">
-                                <div class="testimonial-item">
-                                    <div class="d-flex align-items-center">
-                                        <img src="assets/img/testimonials/testimonials-4.jpg"
-                                            class="testimonial-img flex-shrink-0" alt="">
-                                        <div>
-                                            <h3>Matt Brandon</h3>
-                                            <h4>Freelancer</h4>
-                                            <div class="stars">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        <i class="bi bi-quote quote-icon-left"></i>
-                                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                        fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore
-                                        quem dolore.
-                                        <i class="bi bi-quote quote-icon-right"></i>
-                                    </p>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-wrap">
-                                <div class="testimonial-item">
-                                    <div class="d-flex align-items-center">
-                                        <img src="assets/img/testimonials/testimonials-5.jpg"
-                                            class="testimonial-img flex-shrink-0" alt="">
-                                        <div>
-                                            <h3>John Larson</h3>
-                                            <h4>Entrepreneur</h4>
-                                            <div class="stars">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        <i class="bi bi-quote quote-icon-left"></i>
-                                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor
-                                        noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam
-                                        esse veniam culpa fore.
-                                        <i class="bi bi-quote quote-icon-right"></i>
-                                    </p>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-        </section><!-- End Testimonials Section -->
 
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio" class="portfolio sections-bg">
@@ -477,155 +347,167 @@
                     <div>
                         <ul class="portfolio-flters">
                             <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-product">Product</li>
-                            <li data-filter=".filter-branding">Branding</li>
-                            <li data-filter=".filter-books">Books</li>
+                            <li data-filter=".filter-desktop">Desktop</li>
+                            <li data-filter=".filter-webapplication">Web Application</li>
+                            <li data-filter=".filter-website">Website</li>
+                            <li data-filter=".filter-android">Android</li>
                         </ul><!-- End Portfolio Filters -->
                     </div>
 
                     <div class="row gy-4 portfolio-container">
 
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-webapplication">
                             <div class="portfolio-wrap">
                                 <a href="assets/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app"
                                     class="glightbox"><img src="assets/img/portfolio/app-1.jpg" class="img-fluid"
                                         alt=""></a>
                                 <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">App 1</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <h4><a href="portfolio-details.html" title="More Details">Hancie e-Learning
+                                            Studio</a></h4>
+                                    <p>Web Application</p>
                                 </div>
                             </div>
                         </div><!-- End Portfolio Item -->
 
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-product">
-                            <div class="portfolio-wrap">
-                                <a href="assets/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app"
-                                    class="glightbox"><img src="assets/img/portfolio/product-1.jpg" class="img-fluid"
-                                        alt=""></a>
-                                <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">Product 1</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                                </div>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
-                            <div class="portfolio-wrap">
-                                <a href="assets/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-app"
-                                    class="glightbox"><img src="assets/img/portfolio/branding-1.jpg" class="img-fluid"
-                                        alt=""></a>
-                                <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">Branding 1</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                                </div>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-books">
-                            <div class="portfolio-wrap">
-                                <a href="assets/img/portfolio/books-1.jpg" data-gallery="portfolio-gallery-app"
-                                    class="glightbox"><img src="assets/img/portfolio/books-1.jpg" class="img-fluid"
-                                        alt=""></a>
-                                <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">Books 1</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                                </div>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-webapplication">
                             <div class="portfolio-wrap">
                                 <a href="assets/img/portfolio/app-2.jpg" data-gallery="portfolio-gallery-app"
                                     class="glightbox"><img src="assets/img/portfolio/app-2.jpg" class="img-fluid"
                                         alt=""></a>
                                 <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">App 2</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <h4><a href="portfolio-details.html" title="More Details">Naindra Raj Tea
+                                            Management System</a></h4>
+                                    <p>Web Application</p>
                                 </div>
                             </div>
                         </div><!-- End Portfolio Item -->
 
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-product">
-                            <div class="portfolio-wrap">
-                                <a href="assets/img/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app"
-                                    class="glightbox"><img src="assets/img/portfolio/product-2.jpg" class="img-fluid"
-                                        alt=""></a>
-                                <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">Product 2</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                                </div>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
-                            <div class="portfolio-wrap">
-                                <a href="assets/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app"
-                                    class="glightbox"><img src="assets/img/portfolio/branding-2.jpg" class="img-fluid"
-                                        alt=""></a>
-                                <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">Branding 2</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                                </div>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-books">
-                            <div class="portfolio-wrap">
-                                <a href="assets/img/portfolio/books-2.jpg" data-gallery="portfolio-gallery-app"
-                                    class="glightbox"><img src="assets/img/portfolio/books-2.jpg" class="img-fluid"
-                                        alt=""></a>
-                                <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">Books 2</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                                </div>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-desktop">
                             <div class="portfolio-wrap">
                                 <a href="assets/img/portfolio/app-3.jpg" data-gallery="portfolio-gallery-app"
                                     class="glightbox"><img src="assets/img/portfolio/app-3.jpg" class="img-fluid"
                                         alt=""></a>
                                 <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">App 3</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <h4><a href="portfolio-details.html" title="More Details">NH Nepali Dictionary</a>
+                                    </h4>
+                                    <p>Desktop Application</p>
                                 </div>
                             </div>
                         </div><!-- End Portfolio Item -->
 
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-product">
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-website">
                             <div class="portfolio-wrap">
-                                <a href="assets/img/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app"
-                                    class="glightbox"><img src="assets/img/portfolio/product-3.jpg" class="img-fluid"
+                                <a href="assets/img/portfolio/app-4.jpg" data-gallery="portfolio-gallery-app"
+                                    class="glightbox"><img src="assets/img/portfolio/app-4.jpg" class="img-fluid"
                                         alt=""></a>
                                 <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">Product 3</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <h4><a href="portfolio-details.html" title="More Details">Hancie Phago Portfolio</a>
+                                    </h4>
+                                    <p>Website</p>
                                 </div>
                             </div>
                         </div><!-- End Portfolio Item -->
 
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-webapplication">
                             <div class="portfolio-wrap">
-                                <a href="assets/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app"
-                                    class="glightbox"><img src="assets/img/portfolio/branding-3.jpg" class="img-fluid"
+                                <a href="assets/img/portfolio/app-5.jpeg" data-gallery="portfolio-gallery-app"
+                                    class="glightbox"><img src="assets/img/portfolio/app-5.jpeg" class="img-fluid"
                                         alt=""></a>
                                 <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">Branding 3</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <h4><a href="portfolio-details.html" title="More Details">Personal Information
+                                            Management System</a></h4>
+                                    <p>Web Application</p>
                                 </div>
                             </div>
                         </div><!-- End Portfolio Item -->
 
-                        <div class="col-xl-4 col-md-6 portfolio-item filter-books">
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-desktop">
                             <div class="portfolio-wrap">
-                                <a href="assets/img/portfolio/books-3.jpg" data-gallery="portfolio-gallery-app"
-                                    class="glightbox"><img src="assets/img/portfolio/books-3.jpg" class="img-fluid"
+                                <a href="assets/img/portfolio/app-6.png" data-gallery="portfolio-gallery-app"
+                                    class="glightbox"><img src="assets/img/portfolio/app-6.png" class="img-fluid"
                                         alt=""></a>
                                 <div class="portfolio-info">
-                                    <h4><a href="portfolio-details.html" title="More Details">Books 3</a></h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <h4><a href="portfolio-details.html" title="More Details">NH Library Management
+                                            System</a></h4>
+                                    <p>Desktop Application</p>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-desktop">
+                            <div class="portfolio-wrap">
+                                <a href="assets/img/portfolio/app-7.jpg" data-gallery="portfolio-gallery-app"
+                                    class="glightbox"><img src="assets/img/portfolio/app-7.jpg" class="img-fluid"
+                                        alt=""></a>
+                                <div class="portfolio-info">
+                                    <h4><a href="portfolio-details.html" title="More Details">Hotel Management
+                                            System</a></h4>
+                                    <p>Desktop Application</p>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-desktop">
+                            <div class="portfolio-wrap">
+                                <a href="assets/img/portfolio/app-8.png" data-gallery="portfolio-gallery-app"
+                                    class="glightbox"><img src="assets/img/portfolio/app-8.png" class="img-fluid"
+                                        alt=""></a>
+                                <div class="portfolio-info">
+                                    <h4><a href="portfolio-details.html" title="More Details">Taxi Booking System</a>
+                                    </h4>
+                                    <p>Desktop Application</p>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-website">
+                            <div class="portfolio-wrap">
+                                <a href="assets/img/portfolio/app-9.png" data-gallery="portfolio-gallery-app"
+                                    class="glightbox"><img src="assets/img/portfolio/app-9.png" class="img-fluid"
+                                        alt=""></a>
+                                <div class="portfolio-info">
+                                    <h4><a href="portfolio-details.html" title="More Details">Nitesh Hamal Portfolio</a>
+                                    </h4>
+                                    <p>Website</p>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-webapplication">
+                            <div class="portfolio-wrap">
+                                <a href="assets/img/portfolio/app-10.jpeg" data-gallery="portfolio-gallery-app"
+                                    class="glightbox"><img src="assets/img/portfolio/app-10.jpeg" class="img-fluid"
+                                        alt=""></a>
+                                <div class="portfolio-info">
+                                    <h4><a href="portfolio-details.html" title="More Details">NH Online Dictionary</a>
+                                    </h4>
+                                    <p>Web Application</p>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-website">
+                            <div class="portfolio-wrap">
+                                <a href="assets/img/portfolio/app-11.jpeg" data-gallery="portfolio-gallery-app"
+                                    class="glightbox"><img src="assets/img/portfolio/app-11.jpeg" class="img-fluid"
+                                        alt=""></a>
+                                <div class="portfolio-info">
+                                    <h4><a href="portfolio-details.html" title="More Details">Om Kalpataru Carriers
+                                            Pvt.Ltd</a></h4>
+                                    <p>Website</p>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-website">
+                            <div class="portfolio-wrap">
+                                <a href="assets/img/portfolio/app-12.png" data-gallery="portfolio-gallery-app"
+                                    class="glightbox"><img src="assets/img/portfolio/app-12.png" class="img-fluid"
+                                        alt=""></a>
+                                <div class="portfolio-info">
+                                    <h4><a href="portfolio-details.html" title="More Details">Naindra Tea Farming</a>
+                                    </h4>
+                                    <p>Website</p>
                                 </div>
                             </div>
                         </div><!-- End Portfolio Item -->
@@ -712,78 +594,7 @@
             </div>
         </section><!-- End Our Team Section -->
 
-        <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="pricing sections-bg">
-            <div class="container" data-aos="fade-up">
 
-                <div class="section-header">
-                    <h2>Pricing</h2>
-                    <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat
-                        sunt id nobis omnis tiledo stran delop</p>
-                </div>
-
-                <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">
-
-                    <div class="col-lg-4">
-                        <div class="pricing-item">
-                            <h3>Free Plan</h3>
-                            <div class="icon">
-                                <i class="bi bi-box"></i>
-                            </div>
-                            <h4><sup>$</sup>0<span> / month</span></h4>
-                            <ul>
-                                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span>
-                                </li>
-                            </ul>
-                            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
-                    <div class="col-lg-4">
-                        <div class="pricing-item featured">
-                            <h3>Business Plan</h3>
-                            <div class="icon">
-                                <i class="bi bi-airplane"></i>
-                            </div>
-
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
-                                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-                                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
-                            </ul>
-                            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
-                    <div class="col-lg-4">
-                        <div class="pricing-item">
-                            <h3>Developer Plan</h3>
-                            <div class="icon">
-                                <i class="bi bi-send"></i>
-                            </div>
-                            <h4><sup>$</sup>49<span> / month</span></h4>
-                            <ul>
-                                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-                                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
-                            </ul>
-                            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
-                </div>
-
-            </div>
-        </section><!-- End Pricing Section -->
 
         <!-- ======= Frequently Asked Questions Section ======= -->
         <section id="faq" class="faq">
@@ -903,7 +714,7 @@
         </section><!-- End Frequently Asked Questions Section -->
 
         <!-- ======= Recent Blog Posts Section ======= -->
-        <section id="recent-posts" class="recent-posts sections-bg">
+        <!-- <section id="recent-posts" class="recent-posts sections-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-header">
@@ -938,68 +749,71 @@
                                 </div>
                             </div>
 
-                        </article>
-                    </div><!-- End post list item -->
+                        </article> -->
+        <!-- </div> -->
+        <!-- End post list item -->
 
-                    <div class="col-xl-4 col-md-6">
-                        <article>
+        <!-- <div class="col-xl-4 col-md-6">
+            <article>
 
-                            <div class="post-img">
-                                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-                            </div>
+                <div class="post-img">
+                    <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                </div>
 
-                            <p class="post-category">Sports</p>
+                <p class="post-category">Sports</p>
 
-                            <h2 class="title">
-                                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-                            </h2>
+                <h2 class="title">
+                    <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+                </h2>
 
-                            <div class="d-flex align-items-center">
-                                <img src="assets/img/blog/blog-author-2.jpg" alt=""
-                                    class="img-fluid post-author-img flex-shrink-0">
-                                <div class="post-meta">
-                                    <p class="post-author">Allisa Mayer</p>
-                                    <p class="post-date">
-                                        <time datetime="2022-01-01">Jun 5, 2022</time>
-                                    </p>
-                                </div>
-                            </div>
+                <div class="d-flex align-items-center">
+                    <img src="assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                    <div class="post-meta">
+                        <p class="post-author">Allisa Mayer</p>
+                        <p class="post-date">
+                            <time datetime="2022-01-01">Jun 5, 2022</time>
+                        </p>
+                    </div>
+                </div>
 
-                        </article>
-                    </div><!-- End post list item -->
+            </article> -->
+        <!-- </div> -->
+        <!-- End post list item -->
 
-                    <div class="col-xl-4 col-md-6">
-                        <article>
+        <!-- <div class="col-xl-4 col-md-6">
+            <article>
 
-                            <div class="post-img">
-                                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-                            </div>
+                <div class="post-img">
+                    <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                </div>
 
-                            <p class="post-category">Entertainment</p>
+                <p class="post-category">Entertainment</p>
 
-                            <h2 class="title">
-                                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et
-                                    soluta</a>
-                            </h2>
+                <h2 class="title">
+                    <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et
+                        soluta</a>
+                </h2>
 
-                            <div class="d-flex align-items-center">
-                                <img src="assets/img/blog/blog-author-3.jpg" alt=""
-                                    class="img-fluid post-author-img flex-shrink-0">
-                                <div class="post-meta">
-                                    <p class="post-author">Mark Dower</p>
-                                    <p class="post-date">
-                                        <time datetime="2022-01-01">Jun 22, 2022</time>
-                                    </p>
-                                </div>
-                            </div>
+                <div class="d-flex align-items-center">
+                    <img src="assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                    <div class="post-meta">
+                        <p class="post-author">Mark Dower</p>
+                        <p class="post-date">
+                            <time datetime="2022-01-01">Jun 22, 2022</time>
+                        </p>
+                    </div>
+                </div>
 
-                        </article>
-                    </div><!-- End post list item -->
+            </article> -->
+        <!-- </div> -->
+        <!-- End post list item -->
 
-                </div><!-- End recent posts list -->
+        <!-- </div> -->
+        <!-- End recent posts list -->
 
-            </div>
-        </section><!-- End Recent Blog Posts Section -->
+        <!-- </div> -->
+        <!-- </section> -->
+        <!-- End Recent Blog Posts Section -->
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
@@ -1022,7 +836,8 @@
                                     <h4>Location:</h4>
                                     <p>Shankamul, New Baneshwor, Kathmandu</p>
                                 </div>
-                            </div><!-- End Info Item -->
+                            </div>
+                            <!-- End Info Item -->
 
                             <div class="info-item d-flex">
                                 <i class="bi bi-envelope flex-shrink-0"></i>

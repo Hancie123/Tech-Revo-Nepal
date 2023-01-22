@@ -21,7 +21,8 @@
 <!--========== HEADER ==========-->
 <header class="header bg-success">
     <div class="header__container">
-        <a href="Home.php" class="header__logo text-light">Welcome: </a>
+        <a href="{{url('/')}}/home/dashboard" class="header__logo text-light">Welcome: {{Session::get('name')}}
+            [Admin]</a>
 
 
 
