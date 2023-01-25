@@ -23,14 +23,11 @@
     <link href="{{url('/')}}/adminassets/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{url('/')}}/adminassets/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="{{url('/')}}/adminassets/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="{{url('/')}}/adminassets/assets/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="{{url('/')}}/adminassets/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="{{url('/')}}/adminassets/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="{{url('/')}}/adminassets/assets/vendor/simple-datatables/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <!-- Template Main CSS File -->
     <link href="{{url('/')}}/adminassets/assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 </head>
@@ -233,7 +230,7 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                            <a class="dropdown-item d-flex align-items-center" href="{{url('/home/profile')}}">
                                 <i class="bi bi-gear"></i>
                                 <span>Account Settings</span>
                             </a>
@@ -279,14 +276,14 @@
                 </a>
                 <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="components-alerts.html">
-                            <i class="bi bi-circle"></i><span>Alerts</span>
+                        <a href="{{url('/home/passwords')}}">
+                            <i class="bi bi-circle"></i><span>Passwords</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="components-cards.html">
-                            <i class="bi bi-circle"></i><span>Cards</span>
+                            <i class="bi bi-circle"></i><span>Notes</span>
                         </a>
                     </li>
 
@@ -376,7 +373,7 @@
             <li class="nav-heading">Pages</li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
+                <a class="nav-link collapsed" href="{{url('/home/profile')}}">
                     <i class="bi bi-person"></i>
                     <span>Profile</span>
                 </a>

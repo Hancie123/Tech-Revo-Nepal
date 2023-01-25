@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexcontroller;
 use App\Http\Controllers\admincontroller;
 use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\PasswordController;
 use App\Models\Admin;
 
 /*
@@ -32,3 +33,6 @@ Route::get('/customerview',[admincontroller::class,'viewadmin']);
 Route::get('/home/dashboard',[AdminAuthController::class,'dashboard'])->middleware('isLoggedIn');
 Route::get('/home/dashboard/logout',[AdminAuthController::class,'logout']);
 Route::get('/home/profile',[indexcontroller::class,'profile'])->middleware('isLoggedIn');
+Route::get('/home/passwords',[indexcontroller::class,'password'])->middleware('isLoggedIn');
+Route::post('/home/passwords',[PasswordController::class,'password']);
+Route::get('/home/passwords',[PasswordController::class,'viewpassword'])->name('home.passwords');

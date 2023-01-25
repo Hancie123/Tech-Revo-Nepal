@@ -20,6 +20,10 @@ class indexcontroller extends Controller
         return view('home/profile');
     }
 
+    public function password(){
+        return view('home/passwords');
+    }
+
     
     
 

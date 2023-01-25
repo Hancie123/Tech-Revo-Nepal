@@ -68,6 +68,44 @@
 
                         </form>
 
+                        <!-- Button to Open the Modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+                            Forgot Password
+                        </button>
+
+                        <!-- The Modal -->
+                        <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content w3-center">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Forgot Password</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <form method="post">
+                                            @csrf
+
+
+                                            <input type=" text" class="w3-input w3-border" name="email"
+                                                value="{{old('email')}}" required spellcheck="false"
+                                                placeholder="Enter your email">
+
+
+                                            <br>
+                                            <button class="btn btn-success">Reset Password</button>
+                                        </form>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
                         <a href="/registration">No account? Register here!</a>
 
 
