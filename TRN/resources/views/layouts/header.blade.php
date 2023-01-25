@@ -20,6 +20,8 @@
 <link href="{{url('/')}}\assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 <link href="{{url('/')}}\assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
 <!-- Template Main CSS File -->
 <link href={{asset('assets\main.css')}} rel="stylesheet">

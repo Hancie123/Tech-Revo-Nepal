@@ -12,7 +12,7 @@ class PasswordController extends Controller
         $request->validate([
             'email'=>'required',
             'password'=>'required',
-            'category'=>'required'
+            'category'=>'required|url'
         ]);
 
         $password=new Password;

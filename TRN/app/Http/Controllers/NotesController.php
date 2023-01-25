@@ -17,6 +17,20 @@ class NotesController extends Controller
         return view('/home/view_notes')->with($data);
     }
 
+
+    // public function ViewNotes1($id){
+    //     $notes=notes::find($id);
+    //     if ($notes){
+    //         return view('/home/view_notes');
+    //     }
+    //     else{
+    //         $data=compact('notes');
+    //     return view('/home/view_notes')->with($data);
+            
+    //     }
+        
+    // }
+
     
 
     public function storenotes(Request $request){

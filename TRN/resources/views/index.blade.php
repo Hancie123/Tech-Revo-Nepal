@@ -821,8 +821,7 @@
 
                 <div class="section-header">
                     <h2>Contact</h2>
-                    <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt
-                        quis dolorem dolore earum</p>
+                    <p>GET IN TOUCH WITH US!</p>
                 </div>
 
                 <div class="row gx-lg-0 gy-4">
@@ -867,30 +866,59 @@
                     </div>
 
                     <div class="col-lg-8">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form action="{{url('/')}}/#contact" method="post" role="form" class="php-email-form1">
+                            @if(Session::has('success'))
+                            <div class="alert alert-success">{{Session::get('success')}}</div>
+                            @endif
+                            @if(Session::has('fail'))
+                            <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                            @endif
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name"
-                                        placeholder="Your Name" required>
+                                        placeholder="Your Name">
+                                    <span class="text-danger">
+                                        @error('name')
+                                        {{$message}}
+
+                                        @enderror
+                                    </span>
                                 </div>
                                 <div class="col-md-6 form-group mt-3 mt-md-0">
                                     <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email" required>
+                                        placeholder="Your Email">
+                                    <span class="text-danger">
+                                        @error('email')
+                                        {{$message}}
+
+                                        @enderror
+                                    </span>
                                 </div>
                             </div>
+
                             <div class="form-group mt-3">
                                 <input type="text" class="form-control" name="subject" id="subject"
-                                    placeholder="Subject" required>
+                                    placeholder="Subject">
+                                <span class="text-danger">
+                                    @error('subject')
+                                    {{$message}}
+
+                                    @enderror
+                                </span>
                             </div>
                             <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="7" placeholder="Message"
-                                    required></textarea>
+                                <textarea class="form-control" name="message" rows="7" placeholder="Message"></textarea>
+                                <span class="text-danger">
+                                    @error('message')
+                                    {{$message}}
+
+                                    @enderror
+                                </span>
                             </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
+
+
+
                             <div class="text-center"><button type="submit">Send Message</button></div>
                         </form>
                     </div><!-- End Contact Form -->

@@ -6,6 +6,7 @@ use App\Http\Controllers\admincontroller;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\NotesController;
+use App\Http\Controllers\ContactController;
 use App\Models\Admin;
 
 /*
@@ -20,6 +21,7 @@ use App\Models\Admin;
 */
 
 Route::get('/',[indexcontroller::class,'index']);
+Route::post('/',[ContactController::class,'storecontact']);
 
 Route::get('/login',[indexcontroller::class,'login']);
 Route::post('/login',[AdminAuthController::class,'logincheck']);

@@ -38,10 +38,12 @@
                     <tr>
                         <td>{{$note['note_id']}}</td>
                         <td>{{$note['title']}}</td>
-                        <td><button type="button" class="btn btn-primary" id="show-user" data-bs-toggle="modal"
-                                data-bs-target="#myModal">
-                                <i class="bi bi-eye"></i>
-                            </button></td>
+                        <td>
+                            <a><button type="button" class="btn btn-primary" id="show-user" data-bs-toggle="modal"
+                                    data-bs-target="#myModal">
+                                    <i class="bi bi-eye"></i>
+                                </button></a>
+                        </td>
                     </tr>
                     @endforeach
 
@@ -77,21 +79,7 @@
         </div>
 
 
-        <script type="text/javascript">
-        $(document).ready(function() {
 
-            $('body').on('click', '#show-user', function() {
-                var userURL = $(this).data('url');
-                $.get(userURL, function(data) {
-                    $('#userShowModal').modal('show');
-
-                    $('#user-name').text(data.name);
-
-                })
-            });
-
-        });
-        </script>
 
 
     </main>
