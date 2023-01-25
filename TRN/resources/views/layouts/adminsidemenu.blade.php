@@ -30,6 +30,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+
 </head>
 
 <body>
@@ -282,7 +286,7 @@
                     </li>
 
                     <li>
-                        <a href="components-cards.html">
+                        <a href="{{route('home.notes')}}">
                             <i class="bi bi-circle"></i><span>Notes</span>
                         </a>
                     </li>

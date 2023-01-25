@@ -5,6 +5,7 @@ use App\Http\Controllers\indexcontroller;
 use App\Http\Controllers\admincontroller;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\NotesController;
 use App\Models\Admin;
 
 /*
@@ -33,6 +34,14 @@ Route::get('/customerview',[admincontroller::class,'viewadmin']);
 Route::get('/home/dashboard',[AdminAuthController::class,'dashboard'])->middleware('isLoggedIn');
 Route::get('/home/dashboard/logout',[AdminAuthController::class,'logout']);
 Route::get('/home/profile',[indexcontroller::class,'profile'])->middleware('isLoggedIn');
+
+
 Route::get('/home/passwords',[indexcontroller::class,'password'])->middleware('isLoggedIn');
 Route::post('/home/passwords',[PasswordController::class,'password']);
 Route::get('/home/passwords',[PasswordController::class,'viewpassword'])->name('home.passwords');
+Route::get('/home/passwords/{id}',[PasswordController::class,'deletepassword']);
+
+
+Route::get('/home/notes',[NotesController::class,'Notes'])->middleware('isLoggedIn')->name('home.notes');
+Route::post('/home/notes',[NotesController::class,'storenotes'])->middleware('isLoggedIn')->name('home.notes');
+Route::get('/home/view_notes',[NotesController::class,'ViewNotes'])->middleware('isLoggedIn')->name('home.view_notes');

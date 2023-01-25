@@ -59,7 +59,7 @@
                     Nepal</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="https://techrevonepal.com/">Hancie Phago</a>
+            Designed by <a href="https://techrevonepal.com/">Tech Revo Nepal Team</a>
         </div>
     </div>
 

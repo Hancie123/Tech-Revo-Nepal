@@ -1,10 +1,11 @@
  <!-- ======= Footer ======= -->
  <footer id="footer" class="footer">
      <div class="copyright">
-         &copy; Copyright <strong><span>Tech Revo Nepal</span></strong>. All Rights Reserved
+         &copy; Copyright <?php $dateYear = date('Y'); echo $dateYear;  ?> <strong><span>Tech Revo
+                 Nepal</span></strong>. All Rights Reserved
      </div>
      <div class="credits">
-         Designed by <a href="https://techrevonepal.com/">Hancie Phago</a>
+         Designed by <a href="https://techrevonepal.com/">Tech Revo Nepal Team</a>
      </div>
  </footer><!-- End Footer -->
 

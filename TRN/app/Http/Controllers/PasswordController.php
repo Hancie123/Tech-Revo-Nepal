@@ -40,4 +40,19 @@ class PasswordController extends Controller
         
         
     }
+
+    //delete function
+    public function deletepassword($id){
+        
+        $password=password::find($id);
+        if(!is_null($password)){
+            $password->delete();
+            return redirect('/home/passwords')->with('passwordsuccess',"Password is deleted successfully");
+        }
+        else{
+            return redirect('/home/passwords')->with('passwordfail',"Error Occurred");
+        }
+        
+        
+    }
 }
