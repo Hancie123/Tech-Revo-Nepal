@@ -16,9 +16,7 @@ class indexcontroller extends Controller
         return view('login');
     }
 
-    public function profile(){
-        return view('home/profile');
-    }
+    
 
     public function password(){
         return view('home/passwords');

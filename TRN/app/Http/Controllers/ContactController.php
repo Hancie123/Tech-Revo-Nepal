@@ -34,9 +34,5 @@ class ContactController extends Controller
         
     }
 
-    public function countContact(){
-        $contact=contacts::count();
-        $data=compact('contacts');
-        return view('/home/dashboard')->with($data);
-    }
+  
 }

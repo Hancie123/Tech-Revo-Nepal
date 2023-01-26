@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\password;
+use App\Models\Contacts;
 
 
 class PasswordController extends Controller
@@ -35,8 +36,9 @@ class PasswordController extends Controller
 
     public function viewpassword(){
         $password=password::all();
-        $data=compact('password');
-        return view('/home/passwords')->with($data);
+        $contact=contacts::count();
+        $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
+        return view('/home/passwords',compact('password','contact','viewcontact'));
         
         
     }

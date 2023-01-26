@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use App\Models\Contacts;
 use Hash;
 
 
@@ -52,6 +53,9 @@ class admincontroller extends Controller
         return view('customerview')->with($data);
 
     }
+
+
+    
 
     //delete function
     public function delete($id){

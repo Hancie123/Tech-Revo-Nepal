@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use App\Models\Contacts;
 use Hash;
 use Session;
 
@@ -54,6 +55,12 @@ class AdminAuthController extends Controller
         //     return redirect('login');
         // }
         return view('home/dashboard',compact('data'));
+    }
+
+    public function countContact(){
+        $contact=contacts::count();
+        $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
+        return view('home/dashboard',compact('contact','viewcontact'));
     }
 
 

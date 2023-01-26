@@ -4,17 +4,29 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Notes;
+use App\Models\Contacts;
 
 class NotesController extends Controller
 {
     public function Notes(){
-        return view('/home/notes');
+        $contact=contacts::count();
+        $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
+        return view('/home/notes',compact('contact','viewcontact'));
     }
 
     public function ViewNotes(){
         $notes=notes::all();
-        $data=compact('notes');
-        return view('/home/view_notes')->with($data);
+        $contact=contacts::count();
+        $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
+        return view('/home/view_notes',compact('notes','contact','viewcontact'));
+    }
+
+
+    public function countNotes(){
+        $notescount=notes::count();
+        
+        
+        return view('/home/view_notes',compact('notescount','contact','viewcontact'));
     }
 
 
