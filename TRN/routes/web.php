@@ -22,6 +22,7 @@ use App\Models\Admin;
 
 Route::get('/',[indexcontroller::class,'index']);
 Route::post('/',[ContactController::class,'storecontact']);
+Route::get('/layouts/adminsidemenu',[ContactController::class,'countContact']);
 
 Route::get('/login',[indexcontroller::class,'login']);
 Route::post('/login',[AdminAuthController::class,'logincheck']);
