@@ -8,6 +8,7 @@ use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MessageController;
 use App\Models\Admin;
 
 /*
@@ -52,3 +53,7 @@ Route::get('/home/passwords/{id}',[PasswordController::class,'deletepassword']);
 Route::get('/home/notes',[NotesController::class,'Notes'])->middleware('isLoggedIn')->name('home.notes');
 Route::post('/home/notes',[NotesController::class,'storenotes'])->middleware('isLoggedIn')->name('home.notes');
 Route::get('/home/view_notes',[NotesController::class,'ViewNotes'])->middleware('isLoggedIn')->name('home.view_notes');
+
+
+Route::get('/home/messages',[MessageController::class,'messages'])->middleware('isLoggedIn')->name('home.messages');
+Route::get('/home/messages/{messageid}',[MessageController::class,'deletemessage'])->middleware('isLoggedIn');

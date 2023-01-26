@@ -1,4 +1,6 @@
 @include("layouts/adminsidemenu")
+@push('title')
+<title>Admin Dashboard | View Notes</title>
 
 <body>
 
@@ -59,7 +61,7 @@
 
 
                         <li class="dropdown-footer">
-                            <a href="#">Show all notifications</a>
+                            <a href="{{route('home.messages')}}">Show all notifications</a>
                         </li>
 
                     </ul><!-- End Notification Dropdown Items -->
@@ -214,6 +216,12 @@
                     <li>
                         <a href="{{route('home.notes')}}">
                             <i class="bi bi-circle"></i><span>Notes</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('home.messages')}}">
+                            <i class="bi bi-circle"></i><span>Messages</span>
                         </a>
                     </li>
 

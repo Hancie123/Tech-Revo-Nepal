@@ -1,4 +1,6 @@
 @include("layouts/adminsidemenu")
+@push('title')
+<title>Admin Dashboard | Passwords</title>
 
 <body>
 
@@ -59,7 +61,7 @@
 
 
                         <li class="dropdown-footer">
-                            <a href="#">Show all notifications</a>
+                            <a href="{{route('home.messages')}}">Show all notifications</a>
                         </li>
 
                     </ul><!-- End Notification Dropdown Items -->
@@ -217,6 +219,12 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{route('home.messages')}}">
+                            <i class="bi bi-circle"></i><span>Messages</span>
+                        </a>
+                    </li>
+
                 </ul>
             </li><!-- End Components Nav -->
 
@@ -332,10 +340,6 @@
         </ul>
 
     </aside><!-- End Sidebar-->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/datatables.min.css" />
-
-    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/datatables.min.js"></script>
 
     <main id="main" class="main">
 
@@ -467,7 +471,7 @@
                         <td>{{$data['email']}}</td>
                         <td>{{$data['password']}}</td>
                         <td><a href="{{$data['url']}}" target="_blank">{{$data['url']}}</a></td>
-                        <td>{{$data['created_at']}}</td>
+                        <td>{{$data['created_at']->diffForHumans()}}</td>
                         <td><a href="{{url('/home/passwords')}}/{{$data->password_id}}" class=" text-danger">
                                 <i class=" bi bi-trash"></i>
                             </a></td>
@@ -478,10 +482,17 @@
             </table>
         </div>
     </main>
+
     <script>
     $(document).ready(function() {
         $('#table_id').DataTable();
     });
+    </script>
+
+    <script>
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+    }, false);
     </script>
 
 
