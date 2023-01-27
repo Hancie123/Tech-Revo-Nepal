@@ -62,3 +62,6 @@ Route::get('/home/messages/{messageid}',[MessageController::class,'deletemessage
 Route::get('/home/room_management',[RoomExpensesController::class,'roomexpenses'])->middleware('isLoggedIn');
 Route::get('/home/room_management/deposit_money',[RoomExpensesController::class,'roomdepositmoney'])->middleware('isLoggedIn');
 Route::post('/home/room_management/deposit_money',[RoomExpensesController::class,'insertmoney'])->middleware('isLoggedIn');
+
+Route::get('/home/room_management/withdraw_money',[RoomExpensesController::class,'withdrawmoney'])->middleware('isLoggedIn');
+Route::post('/home/room_management/withdraw_money',[RoomExpensesController::class,'insertwithdrawmoney'])->middleware('isLoggedIn');

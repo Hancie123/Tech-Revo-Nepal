@@ -1,6 +1,7 @@
 @include("layouts/adminsidemenu")
 @push('title')
 <title>Admin Dashboard</title>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <body>
 
@@ -235,15 +236,18 @@
                 </a>
                 <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="{{url('/home/room_expenses')}}">
+                        <a href="{{url('/home/room_management')}}">
                             <i class="bi bi-circle"></i><span>Expenses Management System</span>
                         </a>
 
-                        <a href="forms-elements.html">
-                            <i class="bi bi-circle"></i><span>Analytics </span>
+                        <a href="{{url('/home/room_management/deposit_money')}}">
+                            <i class="bi bi-circle"></i><span>Deposit Money </span>
+                        </a>
+
+                        <a href="{{url('/home/room_management/withdraw_money')}}">
+                            <i class="bi bi-circle"></i><span>Withdraw Money </span>
                         </a>
                     </li>
-
                 </ul>
             </li><!-- End Forms Nav -->
 
@@ -443,7 +447,8 @@
                                             <h6>Tools</h6>
                                         </li>
 
-                                        <li><a class="dropdown-item" href="#">Open</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="{{url('home/room_management/deposit_money')}}">Open</a></li>
 
                                     </ul>
                                 </div>
@@ -480,7 +485,8 @@
                                             <h6>Tools</h6>
                                         </li>
 
-                                        <li><a class="dropdown-item" href="#">Open</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="{{url('/home/room_management/withdraw_money')}}">Open</a></li>
 
                                     </ul>
                                 </div>
@@ -494,7 +500,8 @@
                                             <i class="bi bi-wallet"></i>
                                         </div>
                                         <div class="ps-3">
-                                            <a href="#" class="h5 font-weight-bold">Withdraw Money</a>
+                                            <a href="{{url('/home/room_management/withdraw_money')}}"
+                                                class="h5 font-weight-bold">Withdraw Money</a>
 
 
                                         </div>
@@ -550,7 +557,40 @@
                             <div class="card">
 
                                 <div class="card-body">
-                                    <h5 class="card-title">Deposit Reports <span>/Today</span></h5>
+                                    <h5 class="card-title">Deposit Reports</h5>
+
+                                    <div class="container table-responsive">
+                                        <table class="table table-hover table-striped" id="table_id">
+                                            <thead class="w3-center bg-success text-white">
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Date</th>
+                                                    <th>Deposit</th>
+                                                    <th>Remark</th>
+
+                                                </tr>
+
+                                            </thead>
+                                            <tbody>
+                                                @foreach($deposittable as $data)
+
+                                                <tr>
+                                                    <td>{{$data['Expenses_ID']}}</td>
+                                                    <td>{{$data['Date']}}</td>
+                                                    <td>Rs. {{$data['Deposit']}}</td>
+                                                    <td>{{$data['Remark']}}</td>
+                                                </tr>
+
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+
+
+
+                                    </div>
+
+
+
 
 
 
@@ -565,10 +605,33 @@
                             <div class="card">
 
                                 <div class="card-body">
-                                    <h5 class="card-title">Withdraw Reports <span>/Today</span></h5>
+                                    <h5 class="card-title">Withdraw Reports</h5>
+                                    <div class="container table-responsive">
+                                        <table class="table table-hover table-striped" id="table_id720">
+                                            <thead class="w3-center bg-success text-white">
+                                                <tr>
+                                                    <th style="width:10%">ID</th>
+                                                    <th style="width:10%">Date</th>
+                                                    <th style="width:10%">Deposit</th>
+                                                    <th style="width:10%">Remarks</th>
 
+                                                </tr>
 
+                                            </thead>
+                                            <tbody>
+                                                @foreach($withdrawtable as $data1)
 
+                                                <tr>
+                                                    <td>{{$data1['Expenses_ID']}}</td>
+                                                    <td>{{$data1['Date']}}</td>
+                                                    <td>Rs. {{$data1['Withdraw']}}</td>
+                                                    <td>{{$data1['Remark']}}</td>
+                                                </tr>
+
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
 
                             </div>
@@ -589,30 +652,19 @@
 
                     <!-- Recent Activity -->
                     <div class="card">
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
-
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
-                        </div>
 
                         <div class="card-body">
-                            <h5 class="card-title">Recent Activity <span>| Today</span></h5>
+                            <h5 class="card-title">Recent Activity</h5>
 
                             <div class="activity">
-                                @foreach($viewcontact as $data)
+                                @foreach($room as $data)
                                 <div class="activity-item d-flex">
-                                    <div class="activite-label">{{$data['created_at']->diffForHumans()}}</div>
+                                    <div class="activite-label">{{$data['Status' ]}}</div>
                                     <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
                                     <div class="activity-content">
-                                        {{$data['name']}}<br><a href="#">Room Rent</a><br>
-                                        Debit
+                                        {{$data['Remark']}}<br><a href="#">Rs.
+                                            {{$data['Deposit']}}{{$data['Withdraw']}}</a><br>
+                                        {{$data['created_at']->diffForHumans()}}
                                     </div>
                                 </div><!-- End activity item-->
                                 @endforeach
@@ -627,88 +679,39 @@
                     <div class="card">
 
                         <div class="card-body pb-0">
-                            <h5 class="card-title">Budget Report <span>| This Month</span></h5>
+                            <h5 class="card-title">Budget Report</h5>
+
+                            <script type="text/javascript">
+                            google.charts.load('current', {
+                                'packages': ['corechart']
+                            });
+                            google.charts.setOnLoadCallback(drawChart);
+
+                            function drawChart() {
+
+                                var data = google.visualization.arrayToDataTable([
+                                    ['Task', 'Hours per Day'],
+                                    <?php echo $chartdata?>
+                                ]);
+
+                                var options = {
+                                    title: 'Budget Report'
+                                };
+
+                                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+                                chart.draw(data, options);
+                            }
+                            </script>
+
+
+
+                            <div id="piechart" style="width: 100%; height: 100%;"></div>
 
                         </div>
                     </div><!-- End Budget Report -->
 
-                    <!-- Website Traffic -->
-                    <div class="card">
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
 
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="card-body pb-0">
-                            <h5 class="card-title">Website Traffic <span>| Today</span></h5>
-
-                            <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
-
-                            <script>
-                            document.addEventListener("DOMContentLoaded", () => {
-                                echarts.init(document.querySelector("#trafficChart")).setOption({
-                                    tooltip: {
-                                        trigger: 'item'
-                                    },
-                                    legend: {
-                                        top: '5%',
-                                        left: 'center'
-                                    },
-                                    series: [{
-                                        name: 'Access From',
-                                        type: 'pie',
-                                        radius: ['40%', '70%'],
-                                        avoidLabelOverlap: false,
-                                        label: {
-                                            show: false,
-                                            position: 'center'
-                                        },
-                                        emphasis: {
-                                            label: {
-                                                show: true,
-                                                fontSize: '18',
-                                                fontWeight: 'bold'
-                                            }
-                                        },
-                                        labelLine: {
-                                            show: false
-                                        },
-                                        data: [{
-                                                value: 1048,
-                                                name: 'Search Engine'
-                                            },
-                                            {
-                                                value: 735,
-                                                name: 'Direct'
-                                            },
-                                            {
-                                                value: 580,
-                                                name: 'Email'
-                                            },
-                                            {
-                                                value: 484,
-                                                name: 'Union Ads'
-                                            },
-                                            {
-                                                value: 300,
-                                                name: 'Video Ads'
-                                            }
-                                        ]
-                                    }]
-                                });
-                            });
-                            </script>
-
-                        </div>
-                    </div><!-- End Website Traffic -->
 
 
 
@@ -717,9 +720,46 @@
             </div>
         </section>
 
+
+        <script>
+        $(document).ready(function() {
+            $('#table_id').DataTable({
+                order: [
+                    [1, 'desc']
+                ],
+            });
+        });
+        </script>
+
+
+        <script>
+        $(document).ready(function() {
+            $('#table_id720').DataTable({
+                    order: [
+                        [1, 'desc']
+                    ],
+                }
+
+            );
+        });
+        </script>
+
+
     </main>
 
+    <script>
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+    }, false);
+    </script>
 
 
 
-    @include("layouts/adminfooter")
+
+
+
+</body>
+
+@include("layouts/adminfooter")
+
+</html>

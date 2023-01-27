@@ -1,6 +1,6 @@
 @include("layouts/adminsidemenu")
 @push('title')
-<title>Admin Dashboard | Deposit Money</title>
+<title>Admin Dashboard | Withdraw Money</title>
 <script type="text/javascript" src="{{url('/')}}/assets/nepali-date-picker.min.js"></script>
 <link rel="stylesheet" href="{{url('/')}}/assets/nepali-date-picker.min.css">
 
@@ -346,13 +346,13 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Deposit Money</h1>
+            <h1>Withdraw Money</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{url('/home/dashboard')}}">Home</a></li>
                     <li class="breadcrumb-item"><a href="{{url('/home/room_management')}}">Room Management</a>
                     </li>
-                    <li class="breadcrumb-item active">Deposit Money</li>
+                    <li class="breadcrumb-item active">Withdraw Money</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -361,12 +361,12 @@
         <div class="card">
 
             <div class="text-center">
-                <h2 id="heading" class="card-title p-0 m-0 text-light p-3 bg-success">Room | Deposit Money</h2>
+                <h2 id="heading" class="card-title p-0 m-0 text-light p-3 bg-success">Room | Withdraw Money</h2>
             </div>
             <br>
 
 
-            <form action="{{url('/home/room_management/deposit_money')}}" method="post">
+            <form action="{{url('/home/room_management/withdraw_money')}}" method="post">
                 @if(Session::has('success'))
                 <script>
                 toastr.success("{{Session::get('success')}}")
@@ -379,7 +379,7 @@
                 @endif
                 @csrf
                 <input type="hidden" value="{{Session::get('admin_id')}}" name="admin_id" type="text">
-                <input type="hidden" value="Deposit" name="status" type="text">
+                <input type="hidden" value="Withdraw" name="status" type="text">
                 <div class="w3-cell-row">
 
                     <div class="w3-container w3-cell w3-mobile">
@@ -438,7 +438,7 @@
                     </div>
                 </div>
 
-                <input type="submit" name="room_saving" value="Deposit Money" class="btn btn-success mb-3 mx-5">
+                <input type="submit" name="room_saving" value="Withdraw Money" class="btn btn-success mb-3 mx-5">
 
 
             </form>
