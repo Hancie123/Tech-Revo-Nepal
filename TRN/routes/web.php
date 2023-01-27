@@ -9,6 +9,7 @@ use App\Http\Controllers\NotesController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\RoomExpensesController;
 use App\Models\Admin;
 
 /*
@@ -24,7 +25,7 @@ use App\Models\Admin;
 
 Route::get('/',[indexcontroller::class,'index']);
 Route::post('/',[ContactController::class,'storecontact']);
-Route::get('/home/dashboard',[AdminAuthController::class,'countContact']);
+
 
 
 Route::get('/login',[indexcontroller::class,'login']);
@@ -40,7 +41,7 @@ Route::get('/customerview',[admincontroller::class,'viewadmin']);
 Route::get('/home/dashboard',[AdminAuthController::class,'dashboard'])->middleware('isLoggedIn');
 Route::get('/home/dashboard/logout',[AdminAuthController::class,'logout']);
 Route::get('/home/profile',[ProfileController::class,'profile'])->middleware('isLoggedIn');
-Route::get('/home/dashboard',[AdminAuthController::class,'countContact'])->middleware('isLoggedIn');
+
 
 
 
@@ -57,3 +58,7 @@ Route::get('/home/view_notes',[NotesController::class,'ViewNotes'])->middleware(
 
 Route::get('/home/messages',[MessageController::class,'messages'])->middleware('isLoggedIn')->name('home.messages');
 Route::get('/home/messages/{messageid}',[MessageController::class,'deletemessage'])->middleware('isLoggedIn');
+
+Route::get('/home/room_management',[RoomExpensesController::class,'roomexpenses'])->middleware('isLoggedIn');
+Route::get('/home/room_management/deposit_money',[RoomExpensesController::class,'roomdepositmoney'])->middleware('isLoggedIn');
+Route::post('/home/room_management/deposit_money',[RoomExpensesController::class,'insertmoney'])->middleware('isLoggedIn');

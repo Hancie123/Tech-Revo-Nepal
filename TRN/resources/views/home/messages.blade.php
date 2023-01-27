@@ -235,18 +235,15 @@
                 </a>
                 <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="forms-elements.html">
-                            <i class="bi bi-circle"></i><span>Deposit Money</span>
-                        </a>
-
-                        <a href="forms-elements.html">
-                            <i class="bi bi-circle"></i><span>Withdraw Money</span>
+                        <a href="{{url('/home/room_management')}}">
+                            <i class="bi bi-circle"></i><span>Room Management System</span>
                         </a>
 
                         <a href="forms-elements.html">
                             <i class="bi bi-circle"></i><span>Analytics </span>
                         </a>
                     </li>
+
 
                 </ul>
             </li><!-- End Forms Nav -->

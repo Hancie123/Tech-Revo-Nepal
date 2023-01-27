@@ -54,14 +54,12 @@ class AdminAuthController extends Controller
         // else{
         //     return redirect('login');
         // }
-        return view('home/dashboard',compact('data'));
-    }
-
-    public function countContact(){
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
-        return view('home/dashboard',compact('contact','viewcontact'));
+        return view('home/dashboard',compact('data','contact','viewcontact'));
     }
+
+   
 
 
     public function logout(){
