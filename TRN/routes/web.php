@@ -63,10 +63,12 @@ Route::get('/home/messages/{messageid}',[MessageController::class,'deletemessage
 Route::get('/home/room_management',[RoomExpensesController::class,'roomexpenses'])->middleware('isLoggedIn');
 Route::get('/home/room_management/deposit_money',[RoomExpensesController::class,'roomdepositmoney'])->middleware('isLoggedIn');
 Route::post('/home/room_management/deposit_money',[RoomExpensesController::class,'insertmoney'])->middleware('isLoggedIn');
-
 Route::get('/home/room_management/withdraw_money',[RoomExpensesController::class,'withdrawmoney'])->middleware('isLoggedIn');
 Route::post('/home/room_management/withdraw_money',[RoomExpensesController::class,'insertwithdrawmoney'])->middleware('isLoggedIn');
 
 Route::get('/home/trn_finance_system',[TRNFinanceController::class,'trnfinance'])->middleware('isLoggedIn');
 Route::get('/home/trn_finance_system/deposit_money',[TRNFinanceController::class,'trndepositmoney'])->middleware('isLoggedIn');
 Route::post('/home/trn_finance_system/deposit_money',[TRNFinanceController::class,'trninsertmoney'])->middleware('isLoggedIn');
+
+Route::get('/home/trn_finance_system/withdraw_money',[TRNFinanceController::class,'trnwithdrawmoney'])->middleware('isLoggedIn');
+Route::post('/home/trn_finance_system/withdraw_money',[TRNFinanceController::class,'trninsertwithdrawmoney'])->middleware('isLoggedIn');

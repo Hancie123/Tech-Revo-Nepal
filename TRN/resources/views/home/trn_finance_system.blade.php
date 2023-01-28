@@ -263,13 +263,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="tables-data.html">
+                        <a href="{{url('/home/trn_finance_system/deposit_money')}}">
                             <i class="bi bi-circle"></i><span>Deposit Money</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="tables-data.html">
+                        <a href="{{url('/home/trn_finance_system/withdraw_money')}}">
                             <i class="bi bi-circle"></i><span>Withdraw Money</span>
                         </a>
                     </li>
@@ -454,7 +454,7 @@
                                         </li>
 
                                         <li><a class="dropdown-item"
-                                                href="{{url('home/room_management/deposit_money')}}">Open</a></li>
+                                                href="{{url('home/trn_finance_system/deposit_money')}}">Open</a></li>
 
                                     </ul>
                                 </div>
@@ -492,7 +492,7 @@
                                         </li>
 
                                         <li><a class="dropdown-item"
-                                                href="{{url('/home/room_management/withdraw_money')}}">Open</a></li>
+                                                href="{{url('/home/trn_finance_system/withdraw_money')}}">Open</a></li>
 
                                     </ul>
                                 </div>
@@ -506,7 +506,7 @@
                                             <i class="bi bi-wallet"></i>
                                         </div>
                                         <div class="ps-3">
-                                            <a href="{{url('/home/room_management/withdraw_money')}}"
+                                            <a href="{{url('/home/trn_finance_system/withdraw_money')}}"
                                                 class="h5 font-weight-bold">Withdraw Money</a>
 
 

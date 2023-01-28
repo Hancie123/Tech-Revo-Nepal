@@ -257,13 +257,19 @@
                 </a>
                 <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="tables-general.html">
-                            <i class="bi bi-circle"></i><span>General Tables</span>
+                        <a href="{{url('/home/trn_finance_system')}}">
+                            <i class="bi bi-circle"></i><span>TRN Finance System</span>
                         </a>
                     </li>
                     <li>
-                        <a href="tables-data.html">
-                            <i class="bi bi-circle"></i><span>Data Tables</span>
+                        <a href="{{url('/home/trn_finance_system/deposit_money')}}">
+                            <i class="bi bi-circle"></i><span>Deposit Money</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('/home/trn_finance_system/withdraw_money')}}">
+                            <i class="bi bi-circle"></i><span>Withdraw Money</span>
                         </a>
                     </li>
                 </ul>
