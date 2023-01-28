@@ -37,8 +37,9 @@ class RoomExpensesController extends Controller
     public function roomdepositmoney(){
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
+        $deposittable=room_expenses::select("*")->where('Status','=','Deposit')->orderByDesc("Expenses_ID")->get();
 
-        return view('home/room_deposit_money',compact('contact','viewcontact'));
+        return view('home/room_deposit_money',compact('contact','viewcontact','deposittable'));
     }
 
     public function insertmoney(Request $request){
@@ -71,7 +72,8 @@ class RoomExpensesController extends Controller
     public function withdrawmoney(){
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
-        return view('home/room_withdraw_money',compact('contact','viewcontact'));
+        $withdrawtable=room_expenses::select("*")->where('Status','=','Withdraw')->orderBy('Expenses_ID','asc')->get();
+        return view('home/room_withdraw_money',compact('contact','viewcontact','withdrawtable'));
         
     }
 

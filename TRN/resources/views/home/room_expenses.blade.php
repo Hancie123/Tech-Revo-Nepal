@@ -1,6 +1,6 @@
 @include("layouts/adminsidemenu")
 @push('title')
-<title>Admin Dashboard</title>
+<title>Admin Dashboard | Room Management System</title>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <body>
@@ -259,12 +259,18 @@
                 <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
                         <a href="tables-general.html">
-                            <i class="bi bi-circle"></i><span>General Tables</span>
+                            <i class="bi bi-circle"></i><span>TRN Finance System</span>
                         </a>
                     </li>
                     <li>
                         <a href="tables-data.html">
-                            <i class="bi bi-circle"></i><span>Data Tables</span>
+                            <i class="bi bi-circle"></i><span>Deposit Money</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tables-data.html">
+                            <i class="bi bi-circle"></i><span>Withdraw Money</span>
                         </a>
                     </li>
                 </ul>

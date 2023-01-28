@@ -449,7 +449,66 @@
 
         </div>
 
+
+        <!-- Deposit Reports -->
+        <div class="col-12">
+            <div class="card">
+
+                <div class="card-body">
+                    <h5 class="card-title">Deposit Reports</h5>
+
+                    <div class="container table-responsive">
+                        <table class="table table-hover table-striped" id="table_id">
+                            <thead class="w3-center bg-success text-white">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Date</th>
+                                    <th>Deposit</th>
+                                    <th>Remark</th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                @foreach($deposittable as $data)
+
+                                <tr>
+                                    <td>{{$data['Expenses_ID']}}</td>
+                                    <td>{{$data['Date']}}</td>
+                                    <td>Rs. {{$data['Deposit']}}</td>
+                                    <td>{{$data['Remark']}}</td>
+                                </tr>
+
+                                @endforeach
+                            </tbody>
+                        </table>
+
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </div><!-- End Reports -->
+
     </main>
+
+
+    <script>
+    $(document).ready(function() {
+        $('#table_id').DataTable({
+            order: [
+                [1, 'desc']
+            ],
+        });
+    });
+    </script>
 
 
     <script type="text/javascript">

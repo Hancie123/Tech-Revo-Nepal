@@ -448,6 +448,45 @@
 
 
         </div>
+        <!------- Form End ------->
+
+
+        <!-- Winthdraw Reports -->
+        <div class="col-12">
+            <div class="card">
+
+                <div class="card-body">
+                    <h5 class="card-title">Money Withdraw</h5>
+                    <div class="container table-responsive">
+                        <table class="table table-hover table-striped" id="table_id720">
+                            <thead class="w3-center bg-success text-white">
+                                <tr>
+                                    <th style="width:10%">ID</th>
+                                    <th style="width:10%">Date</th>
+                                    <th style="width:10%">Deposit</th>
+                                    <th style="width:10%">Remarks</th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                @foreach($withdrawtable as $data1)
+
+                                <tr>
+                                    <td>{{$data1['Expenses_ID']}}</td>
+                                    <td>{{$data1['Date']}}</td>
+                                    <td>Rs. {{$data1['Withdraw']}}</td>
+                                    <td>{{$data1['Remark']}}</td>
+                                </tr>
+
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- End Reports -->
 
     </main>
 
@@ -464,6 +503,20 @@
         });
     });
     </script>
+
+
+    <script>
+    $(document).ready(function() {
+        $('#table_id720').DataTable({
+                order: [
+                    [1, 'desc']
+                ],
+            }
+
+        );
+    });
+    </script>
+
 
 </body>
 
