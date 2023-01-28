@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\RoomExpensesController;
 use App\Http\Controllers\TRNFinanceController;
+use App\Http\Controllers\TRNProjectController;
 use App\Models\Admin;
 
 /*
@@ -69,6 +70,9 @@ Route::post('/home/room_management/withdraw_money',[RoomExpensesController::clas
 Route::get('/home/trn_finance_system',[TRNFinanceController::class,'trnfinance'])->middleware('isLoggedIn');
 Route::get('/home/trn_finance_system/deposit_money',[TRNFinanceController::class,'trndepositmoney'])->middleware('isLoggedIn');
 Route::post('/home/trn_finance_system/deposit_money',[TRNFinanceController::class,'trninsertmoney'])->middleware('isLoggedIn');
-
 Route::get('/home/trn_finance_system/withdraw_money',[TRNFinanceController::class,'trnwithdrawmoney'])->middleware('isLoggedIn');
 Route::post('/home/trn_finance_system/withdraw_money',[TRNFinanceController::class,'trninsertwithdrawmoney'])->middleware('isLoggedIn');
+
+
+Route::get('/home/trn_projects',[TRNProjectController::class,'trnproject'])->middleware('isLoggedIn');
+Route::post('/home/trn_projects',[TRNProjectController::class,'insertdata'])->middleware('isLoggedIn');

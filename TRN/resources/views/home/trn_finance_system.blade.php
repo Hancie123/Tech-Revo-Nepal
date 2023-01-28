@@ -277,50 +277,41 @@
             </li><!-- End Tables Nav -->
 
             <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-gem"></i><span>TRN Projects</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{url('/home/trn_projects')}}">
+                            <i class="bi bi-circle"></i><span>Project Management System</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li><!-- End Icons Nav -->
+
+            <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-bar-chart"></i><span>Reports</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
                         <a href="charts-chartjs.html">
-                            <i class="bi bi-circle"></i><span>Growth Report</span>
+                            <i class="bi bi-circle"></i><span>Room Expenses Report</span>
                         </a>
                     </li>
                     <li>
                         <a href="charts-apexcharts.html">
-                            <i class="bi bi-circle"></i><span>Expenses Report</span>
+                            <i class="bi bi-circle"></i><span>TRN Finances Report</span>
                         </a>
                     </li>
                     <li>
                         <a href="charts-echarts.html">
-                            <i class="bi bi-circle"></i><span>ECharts</span>
+                            <i class="bi bi-circle"></i><span>Projects Report</span>
                         </a>
                     </li>
                 </ul>
             </li><!-- End Charts Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-gem"></i><span>TRN Projects</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="icons-bootstrap.html">
-                            <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="icons-remix.html">
-                            <i class="bi bi-circle"></i><span>Remix Icons</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="icons-boxicons.html">
-                            <i class="bi bi-circle"></i><span>Boxicons</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Icons Nav -->
 
             <li class="nav-heading">Pages</li>
 
@@ -581,7 +572,7 @@
                                                 @foreach($deposittable as $data)
 
                                                 <tr>
-                                                    <td>{{$data['Expenses_ID']}}</td>
+                                                    <td>{{$data['TRN_ID']}}</td>
                                                     <td>{{$data['Date']}}</td>
                                                     <td>Rs. {{$data['Deposit']}}</td>
                                                     <td>{{$data['Remark']}}</td>
@@ -628,7 +619,7 @@
                                                 @foreach($withdrawtable as $data1)
 
                                                 <tr>
-                                                    <td>{{$data1['Expenses_ID']}}</td>
+                                                    <td>{{$data1['TRN_ID']}}</td>
                                                     <td>{{$data1['Date']}}</td>
                                                     <td>Rs. {{$data1['Withdraw']}}</td>
                                                     <td>{{$data1['Remark']}}</td>
