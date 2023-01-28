@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\RoomExpensesController;
+use App\Http\Controllers\TRNFinanceController;
 use App\Models\Admin;
 
 /*
@@ -65,3 +66,7 @@ Route::post('/home/room_management/deposit_money',[RoomExpensesController::class
 
 Route::get('/home/room_management/withdraw_money',[RoomExpensesController::class,'withdrawmoney'])->middleware('isLoggedIn');
 Route::post('/home/room_management/withdraw_money',[RoomExpensesController::class,'insertwithdrawmoney'])->middleware('isLoggedIn');
+
+Route::get('/home/trn_finance_system',[TRNFinanceController::class,'trnfinance'])->middleware('isLoggedIn');
+Route::get('/home/trn_finance_system/deposit_money',[TRNFinanceController::class,'trndepositmoney'])->middleware('isLoggedIn');
+Route::post('/home/trn_finance_system/deposit_money',[TRNFinanceController::class,'trninsertmoney'])->middleware('isLoggedIn');
