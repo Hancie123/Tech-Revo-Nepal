@@ -673,8 +673,95 @@
         </section>
         <!------------------------- Container Section Close --------------------------------->
 
+        <br>
+        <!-- Content Row -->
+
+        <div class="row">
+
+            <!--------------- Project Table ------------------------->
+            <div class="col-xl-8 col-lg-7">
+                <div class="card shadow mb-4">
+                    <!-- Card Header--->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Projects Data</h6>
+                    </div>
+                    <br>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <table class="table" id="table_id720">
+                            <thead class="bg-success text-light">
+                                <tr>
+
+                                    <th>Project Name</th>
+                                    <th>Category</th>
+                                    <th>Budget</th>
+                                    <th>Progress</th>
+                                    <th>Status</th>
+                                    <th>Priority</th>
 
 
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach($table as $data)
+                                <tr>
+
+                                    <td>{{$data->title}}</td>
+                                    <td>{{$data->category}}</td>
+                                    <td>{{$data->budget}}</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success bg-success text-light progress-bar-striped active"
+                                                role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                                aria-valuemax="100" style="width:{{$data->progress}}%">
+                                                {{$data->progress}}%
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>@if($data->status=='In Progress')
+                                        <span class="badge bg-primary">In Progress</span>
+                                        @elseif($data->status=='Completed')
+                                        <span class="badge bg-success">Completed</span>
+                                        @else
+                                        <span class="badge bg-warning">Pending</span>
+                                        @endif
+
+                                    </td>
+
+
+                                    <td>@if($data->priority=='High')
+                                        <span class="badge bg-success">High</span>
+                                        @elseif($data->priority=='Medium')
+                                        <span class="badge bg-warning">Medium</span>
+                                        @else
+                                        <span class="badge bg-danger">Low</span>
+                                        @endif
+                                    </td>
+                                </tr>
+                                @endforeach
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Project Report</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -698,6 +785,18 @@
 
 
     </main>
+
+    <script>
+    $(document).ready(function() {
+        $('#table_id720').DataTable({
+                order: [
+                    [1, 'desc']
+                ],
+            }
+
+        );
+    });
+    </script>
 
 
 
