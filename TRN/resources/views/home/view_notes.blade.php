@@ -367,42 +367,34 @@
                         <td>{{$note['note_id']}}</td>
                         <td>{{$note['title']}}</td>
                         <td>
-                            <a><button type="button" class="btn btn-primary" id="show-user" data-bs-toggle="modal"
-                                    data-bs-target="#myModal">
-                                    <i class="bi bi-eye"></i>
-                                </button></a>
+                            <a href="" id="editCompany" data-toggle="modal" data-target='#practice_modal'
+                                data-id="{{ $note->note_id }}">Edit</a>
+                            </button></a>
                         </td>
                     </tr>
                     @endforeach
 
                 </tbody>
 
+
             </table>
+
 
         </div>
 
 
-        <!-- The Modal -->
-        <div class="modal w3-animate-zoom" id="myModal">
+        <div class="modal fade" id="practice_modal">
             <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title"></h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <form id="companydata">
+                    <div class="modal-content">
+                        <input type="hidden" id="color_id" name="color_id" value="">
+                        <div class="modal-body">
+                            <input type="text" name="name" id="name" value="" class="form-control">
+                        </div>
+                        <input type="submit" value="Submit" id="submit" class="btn btn-sm btn-outline-danger py-0"
+                            style="font-size: 0.8em;">
                     </div>
-
-                    <!-- Modal body -->
-
-                    <div class="modal-body">
-
-                        <p><strong>Name: </strong> <span id="user-name"></span></p>
-                    </div>
-
-
-
-                </div>
+                </form>
             </div>
         </div>
 
@@ -413,6 +405,26 @@
     </main>
 
 
+    <script>
+    $(document).ready(function() {
+
+        $('body').on('click', '#editCompany', function(event) {
+
+            event.preventDefault();
+            var id = $(this).data('id');
+            $.get('color/' + id + '/edit', function(data) {
+                $('#userCrudModal').html("Edit category");
+                $('#submit').val("Edit category");
+                $('#practice_modal').modal('show');
+                $('#color_id').val(data.data.id);
+                $('#name').val(data.data.name);
+            })
+        });
+
+    });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
 </body>
 

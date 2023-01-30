@@ -18,9 +18,17 @@ class TRNProjectController extends Controller
         $pendingproject=ProjectModel::where('status','Pending')->count();
         $table=DB::select(DB::raw("SELECT * FROM trnprojects;"));
 
+        $result=DB::select(DB::raw("SELECT count(project_id) as ID, category from trnprojects group by category;"));
+        $data720="";
+        foreach($result as $val){
+            $data720.="['".$val->category."',    ".$val->ID." ],";
+        }
+        
+        $chartdata=$data720;
+
         
         return view('home/trn_projects',compact('contact','viewcontact','table','countproject',
-        'activeproject','completeproject','pendingproject'));
+        'activeproject','completeproject','pendingproject','chartdata'));
     }
 
     public function insertdata(Request $request){

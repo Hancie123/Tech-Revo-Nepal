@@ -1,6 +1,7 @@
 @include("layouts/adminsidemenu")
 @push('title')
 <title>Project Management System</title>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 
 <body>
@@ -757,7 +758,32 @@
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
+                        <script type="text/javascript">
+                        google.charts.load('current', {
+                            'packages': ['corechart']
+                        });
+                        google.charts.setOnLoadCallback(drawChart);
 
+                        function drawChart() {
+
+                            var data = google.visualization.arrayToDataTable([
+                                ['Category', 'ID'],
+                                <?php echo $chartdata?>
+                            ]);
+
+                            var options = {
+                                title: 'Budget Report'
+                            };
+
+                            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+                            chart.draw(data, options);
+                        }
+                        </script>
+
+
+
+                        <div id="piechart" style="width: 100%; height: 100%;"></div>
                     </div>
                 </div>
             </div>

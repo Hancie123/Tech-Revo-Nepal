@@ -15,6 +15,7 @@ class NotesController extends Controller
     }
 
     public function ViewNotes(){
+         
         $notes=notes::all();
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
@@ -30,18 +31,14 @@ class NotesController extends Controller
     }
 
 
-    // public function ViewNotes1($id){
-    //     $notes=notes::find($id);
-    //     if ($notes){
-    //         return view('/home/view_notes');
-    //     }
-    //     else{
-    //         $data=compact('notes');
-    //     return view('/home/view_notes')->with($data);
-            
-    //     }
+    public function ViewNotes1($id){
+        $crud= notes::find($id);  
+        $notes=notes::paginate(3);
+        $contact=contacts::count();
+        $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
+        return view('/home/view_notes',compact('notes','contact','viewcontact','crud'));
         
-    // }
+    }
 
     
 
