@@ -2,6 +2,7 @@
 @push('title')
 <title>Admin Dashboard | View Notes</title>
 
+
 <body>
 
     <!-- ======= Header ======= -->
@@ -344,7 +345,8 @@
             <h1>View Notes</h1>
             <nav>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{url('/home/dashboard')}}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{url('/home/notes')}}">Notes</a></li>
                     <li class="breadcrumb-item active">View Notes</li>
                 </ol>
             </nav>
@@ -369,7 +371,7 @@
                         <td>{{$note['note_id']}}</td>
                         <td>{{$note['title']}}</td>
                         <td>{{$note['updated_at']->diffForHumans()}}</td>
-                        <td style="display:none;">{!!$note['notes']!!}</td>
+                        <td style="display:none;">{{strip_tags($note['notes'])}}</td>
                         <td>
                             <button class="btnEdit btn btn-primary"><i class="bi bi-eye"></i></button>
 
@@ -395,7 +397,10 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{url('/home/view_notes')}}/2" method="post">
+
+
+                        <form action="{{url('/home/notes/view_notes')}}/{{$note->note_id}}" method="post">
+
                             @if(Session::has('updatesuccess'))
                             <script>
                             toastr.success("{{Session::get('updatesuccess')}}")
@@ -439,6 +444,9 @@
         $("#exampleModal").modal('show');
     });
     </script>
+
+
+
 
 
     <script>

@@ -384,7 +384,7 @@
             </span>
             <br>
             <input type="submit" value="Save" class="btn btn-success">
-            <a href="{{route('home.view_notes')}}" class="btn btn-success">View Notes</a>
+            <a href="{{route('home.notes.view_notes')}}" class="btn btn-success">View Notes</a>
 
         </form>
 

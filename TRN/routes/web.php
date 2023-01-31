@@ -55,8 +55,8 @@ Route::get('/home/passwords/{id}',[PasswordController::class,'deletepassword']);
 
 Route::get('/home/notes',[NotesController::class,'Notes'])->middleware('isLoggedIn')->name('home.notes');
 Route::post('/home/notes',[NotesController::class,'storenotes'])->middleware('isLoggedIn')->name('home.notes');
-Route::get('/home/view_notes/',[NotesController::class,'ViewNotes'])->middleware('isLoggedIn')->name('home.view_notes');
-Route::post('/home/view_notes/{id}',[NotesController::class,'updatenotes'])->middleware('isLoggedIn');
+Route::get('/home/notes/view_notes/',[NotesController::class,'ViewNotes'])->middleware('isLoggedIn')->name('home.notes.view_notes');
+Route::post('/home/notes/view_notes/{id}',[NotesController::class,'updatenotes'])->middleware('isLoggedIn');
 
 
 

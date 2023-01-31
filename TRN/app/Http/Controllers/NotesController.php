@@ -33,7 +33,7 @@ class NotesController extends Controller
 
     public function updatenotes(Request $request,$id){
         $note=new Notes;
-        $note= Notes::where('admin_id','=',$id)->first();
+        $note= Notes::where('note_id','=',$id)->first();
         $note->notes=$request['note'];
         $note->update();
         if ($note){
