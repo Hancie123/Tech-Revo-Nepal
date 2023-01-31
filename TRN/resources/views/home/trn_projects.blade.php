@@ -699,6 +699,7 @@
                                     <th>Progress</th>
                                     <th>Status</th>
                                     <th>Priority</th>
+                                    <th style="width:20%">Actions</th>
 
 
                                 </tr>
@@ -739,6 +740,13 @@
                                         @else
                                         <span class="badge bg-danger">Low</span>
                                         @endif
+                                    </td>
+                                    <td>
+                                        <a><button class="btn btn-primary"><i
+                                                    class="bi bi-pencil-square"></i></button></a>
+                                        <a href="{{url('/home/trn_projects/delete')}}/{{$data->project_id}}"><button
+                                                class="btn btn-danger"><i class="bi bi-trash3"></i></button></a>
+
                                     </td>
                                 </tr>
                                 @endforeach
@@ -823,6 +831,9 @@
         );
     });
     </script>
+
+
+
 
 
 

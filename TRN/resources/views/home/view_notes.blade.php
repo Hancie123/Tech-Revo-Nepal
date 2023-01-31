@@ -352,11 +352,13 @@
         </div><!-- End Page Title -->
 
         <div class="container table-responsive">
-            <table class="table table-hover table-borderless">
+            <table class="table table-hover table-borderless" id="table_id">
                 <thead class="w3-center bg-success text-white">
                     <tr>
                         <th>ID</th>
                         <th>Title</th>
+                        <th>Updated</th>
+                        <th style="display:none;">Note</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -366,69 +368,94 @@
                     <tr>
                         <td>{{$note['note_id']}}</td>
                         <td>{{$note['title']}}</td>
+                        <td>{{$note['updated_at']->diffForHumans()}}</td>
+                        <td style="display:none;">{!!$note['notes']!!}</td>
                         <td>
-                            <a href="" id="editCompany" data-toggle="modal" data-target='#practice_modal'
-                                data-id="{{ $note->note_id }}">Edit</a>
-                            </button></a>
+                            <button class="btnEdit btn btn-primary"><i class="bi bi-eye"></i></button>
+
                         </td>
                     </tr>
                     @endforeach
 
                 </tbody>
 
-
             </table>
 
 
+
         </div>
 
 
-        <div class="modal fade" id="practice_modal">
-            <div class="modal-dialog">
-                <form id="companydata">
-                    <div class="modal-content">
-                        <input type="hidden" id="color_id" name="color_id" value="">
-                        <div class="modal-body">
-                            <input type="text" name="name" id="name" value="" class="form-control">
-                        </div>
-                        <input type="submit" value="Submit" id="submit" class="btn btn-sm btn-outline-danger py-0"
-                            style="font-size: 0.8em;">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modeltitle">TRN Note</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </form>
+                    <div class="modal-body">
+                        <form action="{{url('/home/view_notes')}}/2" method="post">
+                            @if(Session::has('updatesuccess'))
+                            <script>
+                            toastr.success("{{Session::get('updatesuccess')}}")
+                            </script>
+                            @endif
+                            @if(Session::has('updatefail'))
+                            <script>
+                            toastr.fail("{{Session::get('updatefail')}}")
+                            </script>
+                            @endif
+                            @csrf
+                            <input type="hidden" value="{{Session::get('admin_id')}}" name="admin_id" type="text">
+                            <textarea class="form-control" rows="20" id="txtName" name="note"></textarea><br>
+                            <input type="submit" class="btn btn-success" value="Update">
+
+
+                        </form>
+
+
+
+                    </div>
+                </div>
+
             </div>
         </div>
-
+        </div>
 
 
 
 
     </main>
 
-
     <script>
-    $(document).ready(function() {
+    $(".btnEdit").click(function() {
+        debugger;
+        var currentTds = $(this).closest("tr").find("td"); // find all td of selected row
+        var cell2 = $(currentTds).eq(3).text(); // eq= cell , text = inner text
 
-        $('body').on('click', '#editCompany', function(event) {
+        $("#txtName").val(cell2);
 
-            event.preventDefault();
-            var id = $(this).data('id');
-            $.get('color/' + id + '/edit', function(data) {
-                $('#userCrudModal').html("Edit category");
-                $('#submit').val("Edit category");
-                $('#practice_modal').modal('show');
-                $('#color_id').val(data.data.id);
-                $('#name').val(data.data.name);
-            })
-        });
-
+        $("#exampleModal").modal('show');
     });
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        $('#table_id').DataTable({
+                order: [
+                    [0, 'desc']
+                ],
+            }
+
+        );
+    });
+    </script>
+
+
+    @include(" layouts/adminfooter")
 
 </body>
-
-
-@include(" layouts/adminfooter")
 
 </html>

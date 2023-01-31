@@ -9,6 +9,7 @@ use App\Models\Contacts;
 class NotesController extends Controller
 {
     public function Notes(){
+        
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         return view('/home/notes',compact('contact','viewcontact'));
@@ -25,18 +26,23 @@ class NotesController extends Controller
 
     public function countNotes(){
         $notescount=notes::count();
-        
-        
+    
         return view('/home/view_notes',compact('notescount','contact','viewcontact'));
     }
 
 
-    public function ViewNotes1($id){
-        $crud= notes::find($id);  
-        $notes=notes::paginate(3);
-        $contact=contacts::count();
-        $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
-        return view('/home/view_notes',compact('notes','contact','viewcontact','crud'));
+    public function updatenotes(Request $request,$id){
+        $note=new Notes;
+        $note= Notes::where('admin_id','=',$id)->first();
+        $note->notes=$request['note'];
+        $note->update();
+        if ($note){
+                return back()->with('updatesuccess','The note is updated');
+                
+        }
+        else{
+                return back()->with('updatefail','Error Occurred');
+            }
         
     }
 

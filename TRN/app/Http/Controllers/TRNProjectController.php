@@ -62,4 +62,19 @@ class TRNProjectController extends Controller
             return back()->with('fail','Error Occurred');
         }
     }
+
+
+    public function deletedata($id){
+        
+        $project=ProjectModel::find($id);
+        if(!is_null($project)){
+            
+            $project->delete();
+            return redirect('/home/trn_projects')->with('success','The password is deleted successfully');
+        }
+        else{
+            return redirect('/home/trn_projects')->with('fail','Error Occurred');
+        }
+        
+    }
 }

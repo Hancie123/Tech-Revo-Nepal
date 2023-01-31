@@ -466,7 +466,9 @@
                     <tr>
                         <td>{{$data['password_id']}}</td>
                         <td>{{$data['email']}}</td>
-                        <td>{{$data['password']}}</td>
+                        <td>{{$data['password']}}
+
+                        </td>
                         <td><a href="{{$data['url']}}" target="_blank">{{$data['url']}}</a></td>
                         <td>{{$data['created_at']->diffForHumans()}}</td>
                         <td><a href="{{url('/home/passwords')}}/{{$data->password_id}}" class=" text-danger">
