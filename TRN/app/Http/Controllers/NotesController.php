@@ -46,6 +46,22 @@ class NotesController extends Controller
         
     }
 
+
+    //delete function
+    public function deletenotes($id){
+        
+        $note=Notes::find($id);
+        if(!is_null($note)){
+            $note->delete();
+            return redirect('/home/notes/view_notes')->with('success',"The note is deleted successfully");
+        }
+        else{
+            return redirect('/home/notes/view_notes')->with('fail',"Error Occurred");
+        }
+        
+        
+    }
+
     
 
     public function storenotes(Request $request){

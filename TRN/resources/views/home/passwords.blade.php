@@ -384,7 +384,7 @@
                             <div class="w3-cell-row">
                                 <div class="w3-container w3-cell w3-mobile">
                                     <label class="w3-text"><b>Username/Email</b></label>
-                                    <input class="w3-input w3-border" name="email" type="text">
+                                    <input class="w3-input w3-border w3-round" name="email" type="text">
                                     <span>
                                         @error('email')
                                         <script>
@@ -396,7 +396,7 @@
                                 </div>
                                 <div class="w3-container w3-cell w3-mobile">
                                     <label class="w3-text"><b>Password</b></label>
-                                    <input class="w3-input w3-border" name="password" type="text">
+                                    <input class="w3-input w3-border w3-round" name="password" type="text">
                                     <span>
                                         @error('password')
                                         <script>
@@ -411,7 +411,7 @@
                             <div class="w3-cell-row">
                                 <div class="w3-container w3-cell w3-mobile">
                                     <label class="w3-text"><b>URL/Category</b></label>
-                                    <input class="w3-input w3-border" name="category" type="text">
+                                    <input class="w3-input w3-border w3-round" name="category" type="text">
                                     <span>
                                         @error('category')
                                         <script>

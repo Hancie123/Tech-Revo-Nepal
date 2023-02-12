@@ -374,7 +374,7 @@
                 @enderror
             </span> <br>
 
-            <textarea name="note" id="editor"></textarea>
+            <textarea class="form-control" rows="15" name="note"></textarea>
             <span>
                 @error('note')
                 <script>

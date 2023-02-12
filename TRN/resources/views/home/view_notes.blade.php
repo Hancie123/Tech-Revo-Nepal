@@ -1,6 +1,7 @@
 @include("layouts/adminsidemenu")
 @push('title')
 <title>Admin Dashboard | View Notes</title>
+<script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
 
 
 <body>
@@ -354,6 +355,17 @@
         </div><!-- End Page Title -->
 
         <div class="container table-responsive">
+            @if(Session::has('success'))
+            <script>
+            toastr.success("{{Session::get('success')}}")
+            </script>
+            @endif
+            @if(Session::has('fail'))
+            <script>
+            toastr.fail("{{Session::get('fail')}}")
+            </script>
+            @endif
+
             <table class="table table-hover table-borderless" id="table_id">
                 <thead class="w3-center bg-success text-white">
                     <tr>
@@ -371,11 +383,18 @@
                         <td>{{$note['note_id']}}</td>
                         <td>{{$note['title']}}</td>
                         <td>{{$note['updated_at']->diffForHumans()}}</td>
-                        <td style="display:none;">{{strip_tags($note['notes'])}}</td>
+                        <td style="display:none;"> {{print($note->notes)}}</td>
                         <td>
                             <button class="btnEdit btn btn-primary"><i class="bi bi-eye"></i></button>
+                            <button class="btnEdit btn btn-success"><i class="bi bi-pencil-square"></i></button>
+
+                            <a href="{{url('/home/notes/view_notes/delete')}}/{{$note->note_id}}">
+                                <button class="btn btn-danger"><i class="bi bi-x-circle-fill"></i></button>
+                            </a>
+
 
                         </td>
+
                     </tr>
                     @endforeach
 
@@ -413,8 +432,8 @@
                             @endif
                             @csrf
                             <input type="hidden" value="{{Session::get('admin_id')}}" name="admin_id" type="text">
-                            <textarea class="form-control" rows="20" id="txtName" name="note"></textarea><br>
-                            <input type="submit" class="btn btn-success" value="Update">
+                            <textarea class="form-control" rows="20" id="txtName" name="note"></textarea>
+
 
 
                         </form>
