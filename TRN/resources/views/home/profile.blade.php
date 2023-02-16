@@ -451,15 +451,36 @@
                                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                                     <!-- Profile Edit Form -->
-                                    <form>
+                                    <form action="{{url('/home/profile')}}/{{Session::get('admin_id')}}" method="post">
 
+                                        @if(Session::has('success'))
+                                        <script>
+                                        toastr.success("{{Session::get('success')}}")
+                                        </script>
+                                        @endif
+                                        @if(Session::has('fail'))
+                                        <script>
+                                        toastr.fail("{{Session::get('fail')}}")
+                                        </script>
+                                        @endif
+
+                                        @csrf
+                                        <input type="hidden" value="{{Session::get('admin_id')}}" name="admin_id"
+                                            type="text">
 
                                         <div class="row mb-3">
                                             <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full
                                                 Name</label>
                                             <div class="col-md-8 col-lg-9">
-                                                <input name="fullName" type="text" class="form-control" id="fullName"
+                                                <input type="text" class="form-control" name="yourname"
                                                     value="{{Session::get('name')}}">
+                                                <span>
+                                                    @error('yourname')
+                                                    <script>
+                                                    toastr.warning('{{$message}}')
+                                                    </script>
+                                                    @enderror
+                                                </span>
                                             </div>
                                         </div>
 
@@ -470,6 +491,13 @@
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="address" type="text" class="form-control" id="Address"
                                                     value="{{Session::get('address')}}">
+                                                <span>
+                                                    @error('address')
+                                                    <script>
+                                                    toastr.warning('{{$message}}')
+                                                    </script>
+                                                    @enderror
+                                                </span>
                                             </div>
                                         </div>
 
@@ -478,6 +506,13 @@
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="phone" type="text" class="form-control" id="Phone"
                                                     value="{{Session::get('mobileno')}}">
+                                                <span>
+                                                    @error('phone')
+                                                    <script>
+                                                    toastr.warning('{{$message}}')
+                                                    </script>
+                                                    @enderror
+                                                </span>
                                             </div>
                                         </div>
 
@@ -486,6 +521,14 @@
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="email" type="email" class="form-control" id="Email"
                                                     value="{{Session::get('email')}}">
+
+                                                <span>
+                                                    @error('email')
+                                                    <script>
+                                                    toastr.warning('{{$message}}')
+                                                    </script>
+                                                    @enderror
+                                                </span>
                                             </div>
                                         </div>
 
