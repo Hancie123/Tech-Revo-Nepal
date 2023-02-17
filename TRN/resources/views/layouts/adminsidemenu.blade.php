@@ -111,7 +111,9 @@
                 <li class="nav-item dropdown">
 
                     <a class="nav-link nav-icon" href="#" data-bs-target="#demo" data-bs-toggle="offcanvas">
-                        <i class="bi bi-chat-dots"></i></a>
+                        <i class="bi bi-chat-dots"></i>
+                        <!-- <span class="badge bg-primary badge-number">NEW</span> -->
+                    </a>
 
 
 
@@ -235,12 +237,26 @@
                                 <span>Account Settings</span>
                             </a>
                         </li>
+
+
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#aboutmodel">
+                                <i class="bi bi-file-person-fill"></i>
+                                <span>About Us</span>
+                            </a>
+                        </li>
+
+
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+
+
 
                         <li>
                             <a class="dropdown-item d-flex align-items-center" href="{{url('/home/dashboard/logout')}}">
@@ -256,6 +272,41 @@
         </nav><!-- End Icons Navigation -->
 
     </header><!-- End Header -->
+
+
+    <!----------------------- About Us Model ----------------------->
+    <div class="modal" id="aboutmodel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title w3-centerr">Tech Revo Nepal</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p>Tech Revo is an IT company based in Nepal that was founded in 2022. They specialize in creating a
+                        wide range of applications such as android, desktop and web applications. They have a team of
+                        experienced professionals led by CEO Hancie Phago, that provides a wide range of services to
+                        their
+                        clients. These services include web development, android development, graphic design, desktop
+                        application development, iOS application development and website design.</p>
+                    <br>
+                    <p>Developers:</p>
+                    <ul>
+                        <li>Hancie Phago</li>
+                        <li>Nitesh Hamal</li>
+                        <li>Aveshesh KC</li>
+                        <li>Ajaya Timsina</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!----------------------- End About Us Model ----------------------->
 
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">

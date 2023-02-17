@@ -7,7 +7,12 @@ use App\Models\Admin;
 use App\Models\Contacts;
 use Hash;
 use Session;
+use DB;
 use App\Models\ChatModel;
+use App\Models\Room_Expenses;
+use App\Models\TRNFinance;
+use App\Models\ProjectModel;
+use App\Models\Notes;
 
 class AdminAuthController extends Controller
 {
@@ -58,7 +63,29 @@ class AdminAuthController extends Controller
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
-        return view('home/dashboard',compact('data','contact','viewcontact','viewchat'));
+        $deposit=room_expenses::sum('Deposit');
+        $withdraw=room_expenses::sum('Withdraw');
+        $roombalance=$deposit-$withdraw;
+
+        $trndeposit=TRNFinance::sum('Deposit');
+        $trnwithdraw=TRNFinance::sum('Withdraw');
+        $trnbalance=$trndeposit-$trnwithdraw;
+
+        $project=ProjectModel::count();
+        $notes=Notes::count();
+
+
+        $result=DB::select(DB::raw("SELECT SUM(Withdraw) as Withdraw1, SUM(Deposit) 
+        as Depo, Date3 from room_expenses group by Date3 order by Expenses_ID DESC Limit 50;"));
+        $data720="";
+        foreach($result as $val){
+            $data720.="['".$val->Date3."',    ".$val->Withdraw1.", ".$val->Depo." ],";
+        }
+        
+        $chartdata=$data720;
+        
+        return view('home/dashboard',compact('data','contact','viewcontact','viewchat','roombalance'
+    ,'trnbalance','project','notes','chartdata'));
     }
 
    

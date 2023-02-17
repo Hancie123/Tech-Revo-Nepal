@@ -84,9 +84,9 @@
                     </span>
                     <br>
 
-                    <label class="form-label" for="firstname">Remark:</label>
+                    <label class="form-label" for="firstname">Deposited By:</label>
                     <textarea type="text" class="form-control" name="remark" id="remark"
-                        placeholder="Remarks"></textarea>
+                        placeholder="Deposited By"></textarea>
                     <span>
                         @error('remark')
                         <script>
@@ -124,7 +124,7 @@
                                 <th>ID</th>
                                 <th>Date</th>
                                 <th>Deposit</th>
-                                <th>Remark</th>
+                                <th>Deposited By</th>
 
                             </tr>
 
