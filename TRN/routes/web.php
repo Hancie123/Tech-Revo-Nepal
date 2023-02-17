@@ -12,6 +12,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\RoomExpensesController;
 use App\Http\Controllers\TRNFinanceController;
 use App\Http\Controllers\TRNProjectController;
+use App\Http\Controllers\ChatController;
 use App\Models\Admin;
 
 /*
@@ -46,6 +47,10 @@ Route::get('/home/dashboard/logout',[AdminAuthController::class,'logout']);
 
 Route::get('/home/profile',[ProfileController::class,'profile'])->middleware('isLoggedIn');
 Route::post('/home/profile/{id}',[ProfileController::class,'editprofile'])->middleware('isLoggedIn');
+
+
+Route::post('/home/dashboard',[ChatController::class,'insertchat'])->middleware('isLoggedIn');
+
 
 
 

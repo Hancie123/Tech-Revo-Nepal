@@ -7,6 +7,7 @@ use App\Models\Admin;
 use App\Models\Contacts;
 use Hash;
 use Session;
+use App\Models\ChatModel;
 
 class AdminAuthController extends Controller
 {
@@ -56,7 +57,8 @@ class AdminAuthController extends Controller
         // }
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
-        return view('home/dashboard',compact('data','contact','viewcontact'));
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        return view('home/dashboard',compact('data','contact','viewcontact','viewchat'));
     }
 
    
