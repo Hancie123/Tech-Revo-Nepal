@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contacts;
+use App\Models\ChatModel;
 
 class MessageController extends Controller
 {
@@ -11,7 +12,8 @@ class MessageController extends Controller
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $viewallmessages=contacts::all();
-        return view('home/messages',compact('contact','viewcontact','viewallmessages'));
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        return view('home/messages',compact('contact','viewcontact','viewallmessages','viewchat'));
         
     }
 

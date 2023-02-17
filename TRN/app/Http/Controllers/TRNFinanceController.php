@@ -7,6 +7,7 @@ use App\Models\TRNFinance;
 use App\Models\Contacts;
 use App\Models\Room_Expenses;
 use DB;
+use App\Models\ChatModel;
 
 class TRNFinanceController extends Controller
 {
@@ -19,7 +20,7 @@ class TRNFinanceController extends Controller
         $balance=$deposit-$withdraw;
         $deposittable=trnfinance::select("*")->where('Status','=','Deposit')->orderByDesc("TRN_ID")->get();
         $withdrawtable=trnfinance::select("*")->where('Status','=','Withdraw')->orderBy('TRN_ID','asc')->get();
-        
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
         $result=DB::select(DB::raw("SELECT sum(Deposit) as ID,Remark from trnfinance where status='Deposit' group by remark"));
         $data720="";
         foreach($result as $val){
@@ -30,15 +31,15 @@ class TRNFinanceController extends Controller
         
         
         return view('home/trn_finance_system',compact('contact','deposittable',
-        'withdrawtable','room','deposit','viewcontact','balance','withdraw','chartdata'));
+        'withdrawtable','room','deposit','viewcontact','balance','withdraw','chartdata','viewchat'));
     }
 
     public function trndepositmoney(){
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $deposittable=trnfinance::select("*")->where('Status','=','Deposit')->orderByDesc("TRN_ID")->get();
-
-        return view('home/trn_deposit_money',compact('contact','viewcontact','deposittable'));
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        return view('home/trn_deposit_money',compact('contact','viewcontact','deposittable','viewchat'));
     }
 
 
@@ -46,8 +47,8 @@ class TRNFinanceController extends Controller
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $withdrawtable=trnfinance::select("*")->where('Status','=','Withdraw')->orderBy('TRN_ID','asc')->get();
-
-        return view('home/trn_withdraw_money',compact('contact','viewcontact','withdrawtable'));
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        return view('home/trn_withdraw_money',compact('contact','viewcontact','withdrawtable','viewchat'));
     }
 
 

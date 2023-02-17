@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Contacts;
 use App\Models\Room_Expenses;
 use DB;
+use App\Models\ChatModel;
 
 
 class RoomExpensesController extends Controller
@@ -19,7 +20,7 @@ class RoomExpensesController extends Controller
         $balance=$deposit-$withdraw;
         $deposittable=room_expenses::select("*")->where('Status','=','Deposit')->orderByDesc("Expenses_ID")->get();
         $withdrawtable=room_expenses::select("*")->where('Status','=','Withdraw')->orderBy('Expenses_ID','asc')->get();
-        
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
         $result=DB::select(DB::raw("SELECT sum(Deposit) as ID,Remark from room_expenses where status='Deposit' group by remark"));
         $data720="";
         foreach($result as $val){
@@ -30,7 +31,7 @@ class RoomExpensesController extends Controller
         
         
         return view('home/room_expenses',compact('contact','deposittable',
-        'withdrawtable','room','deposit','viewcontact','balance','withdraw','chartdata'));
+        'withdrawtable','room','deposit','viewcontact','balance','withdraw','chartdata','viewchat'));
     }
 
 
@@ -38,8 +39,8 @@ class RoomExpensesController extends Controller
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $deposittable=room_expenses::select("*")->where('Status','=','Deposit')->orderByDesc("Expenses_ID")->get();
-
-        return view('home/room_deposit_money',compact('contact','viewcontact','deposittable'));
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        return view('home/room_deposit_money',compact('contact','viewcontact','deposittable','viewchat'));
     }
 
     public function insertmoney(Request $request){
@@ -73,7 +74,8 @@ class RoomExpensesController extends Controller
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $withdrawtable=room_expenses::select("*")->where('Status','=','Withdraw')->orderBy('Expenses_ID','asc')->get();
-        return view('home/room_withdraw_money',compact('contact','viewcontact','withdrawtable'));
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        return view('home/room_withdraw_money',compact('contact','viewcontact','withdrawtable','viewchat'));
         
     }
 

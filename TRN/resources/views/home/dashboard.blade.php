@@ -97,10 +97,6 @@
 
                                 @foreach($viewchat as $data)
 
-
-
-
-
                                 @php
                                 $i = Session::get('admin_id');
 
@@ -146,7 +142,7 @@
 
                                 </div>
                                 <span>
-                                    @error('email')
+                                    @error('message')
                                     <script>
                                     toastr.warning('{{$message}}')
                                     </script>

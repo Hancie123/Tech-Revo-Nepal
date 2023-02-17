@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\password;
 use App\Models\Contacts;
+use App\Models\ChatModel;
 
 
 class PasswordController extends Controller
@@ -38,7 +39,8 @@ class PasswordController extends Controller
         $password=password::all();
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
-        return view('/home/passwords',compact('password','contact','viewcontact'));
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        return view('/home/passwords',compact('password','contact','viewcontact','viewchat'));
         
         
     }

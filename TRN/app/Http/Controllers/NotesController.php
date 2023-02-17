@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Notes;
 use App\Models\Contacts;
+use App\Models\ChatModel;
 
 class NotesController extends Controller
 {
@@ -12,7 +13,8 @@ class NotesController extends Controller
         
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
-        return view('/home/notes',compact('contact','viewcontact'));
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        return view('/home/notes',compact('contact','viewcontact','viewchat'));
     }
 
     public function ViewNotes(){
@@ -20,7 +22,8 @@ class NotesController extends Controller
         $notes=notes::all();
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
-        return view('/home/view_notes',compact('notes','contact','viewcontact'));
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        return view('/home/view_notes',compact('notes','contact','viewcontact','viewchat'));
     }
 
 

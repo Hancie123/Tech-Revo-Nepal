@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Contacts;
 use App\Models\ProjectModel;
 use DB;
+use App\Models\ChatModel;
 
 class TRNProjectController extends Controller
 {
@@ -17,7 +18,7 @@ class TRNProjectController extends Controller
         $completeproject=ProjectModel::where('status','Completed')->count();
         $pendingproject=ProjectModel::where('status','Pending')->count();
         $table=DB::select(DB::raw("SELECT * FROM trnprojects;"));
-
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
         $result=DB::select(DB::raw("SELECT count(project_id) as ID, category from trnprojects group by category;"));
         $data720="";
         foreach($result as $val){
@@ -28,7 +29,7 @@ class TRNProjectController extends Controller
 
         
         return view('home/trn_projects',compact('contact','viewcontact','table','countproject',
-        'activeproject','completeproject','pendingproject','chartdata'));
+        'activeproject','completeproject','pendingproject','chartdata','viewchat'));
     }
 
     public function insertdata(Request $request){

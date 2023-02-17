@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contacts;
 use App\Models\Admin;
+use App\Models\ChatModel;
 
 class ProfileController extends Controller
 {
@@ -12,7 +13,8 @@ class ProfileController extends Controller
     public function profile(){
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
-        return view('home/profile',compact('contact','viewcontact'));
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        return view('home/profile',compact('contact','viewcontact','viewchat'));
     }
 
     public function editprofile(Request $request,$id){
