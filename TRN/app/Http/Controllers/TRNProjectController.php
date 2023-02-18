@@ -19,6 +19,7 @@ class TRNProjectController extends Controller
         $pendingproject=ProjectModel::where('status','Pending')->count();
         $table=DB::select(DB::raw("SELECT * FROM trnprojects;"));
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        
         $result=DB::select(DB::raw("SELECT count(project_id) as ID, category from trnprojects group by category;"));
         $data720="";
         foreach($result as $val){
@@ -26,6 +27,8 @@ class TRNProjectController extends Controller
         }
         
         $chartdata=$data720;
+
+        
 
         
         return view('home/trn_projects',compact('contact','viewcontact','table','countproject',

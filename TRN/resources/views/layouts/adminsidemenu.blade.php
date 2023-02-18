@@ -81,7 +81,8 @@
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
                         <li class="dropdown-header">
                             You have {{$contact}} notifications
-                            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                            <a href="{{url('/home/messages')}}"><span
+                                    class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
@@ -101,7 +102,9 @@
 
 
                         <li class="dropdown-footer">
-                            <a href="#">Show all notifications</a>
+                            <a href="{{url('/home/messages')}}">
+                                Show all notifications
+                            </a>
                         </li>
 
                     </ul><!-- End Notification Dropdown Items -->

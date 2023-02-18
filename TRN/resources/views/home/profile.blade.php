@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-xl-4">
 
-                <div class="card">
+                <div class="card w3-animate-left">
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
                         <label alt="Profile"
@@ -36,9 +36,54 @@
                     </div>
                 </div>
 
+
+
+                <div class="card w3-animate-left">
+
+                    <h4 class="title w3-center">Team Members</h4><br>
+                    <table class="table table-borderless p-3 m-3">
+                        @foreach($user as $data)
+                        @php
+                        $i = Session::get('admin_id');
+                        @endphp
+
+                        @if($data->admin_id !=$i)
+                        <ul class="list-group">
+                            <li class="list-group-item"><label alt="Profile"
+                                    class="w3-circle bg-success py-2 px-2 text-white h5">
+                                    <?php $name=$data->name; echo substr("$name",0,2);?>
+                                </label> {{$data->name}}
+                                <a href="mailto:techrevolutionnepal@gmail.com"
+                                    class="w3-right bg-primary py-2 px-2 w3-circle text-white"><i
+                                        class="bi bi-envelope"></i></a>
+                            </li>
+
+                        </ul>
+
+                        @else
+
+                        @endif
+
+                        @endforeach
+                    </table>
+
+
+
+
+
+                </div>
+
+
+
             </div>
 
-            <div class="col-xl-8">
+
+
+
+
+
+
+            <div class="col-xl-8 w3-animate-right">
 
                 <div class="card">
                     <div class="card-body pt-3">

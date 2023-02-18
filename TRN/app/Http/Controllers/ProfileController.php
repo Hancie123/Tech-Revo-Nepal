@@ -14,7 +14,8 @@ class ProfileController extends Controller
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
-        return view('home/profile',compact('contact','viewcontact','viewchat'));
+        $user=Admin::all();
+        return view('home/profile',compact('contact','viewcontact','viewchat','user'));
     }
 
     public function editprofile(Request $request,$id){

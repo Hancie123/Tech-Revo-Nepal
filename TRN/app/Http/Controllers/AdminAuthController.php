@@ -63,6 +63,7 @@ class AdminAuthController extends Controller
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        
         $deposit=room_expenses::sum('Deposit');
         $withdraw=room_expenses::sum('Withdraw');
         $roombalance=$deposit-$withdraw;
@@ -75,6 +76,17 @@ class AdminAuthController extends Controller
         $notes=Notes::count();
 
 
+        $projectdata=DB::select(DB::raw("SELECT count(project_id) as ID, category from trnprojects group by category;"));
+        $projectdata720="";
+        foreach($projectdata as $val){
+            $projectdata720.="['".$val->category."',    ".$val->ID." ],";
+        }
+        
+        $projectchart=$projectdata720;
+        $projectbudget=ProjectModel::sum('budget');
+        $allproject=DB::select(DB::raw("SELECT * FROM trnprojects ORDER BY project_id DESC limit 10;"));
+
+
         $result=DB::select(DB::raw("SELECT SUM(Withdraw) as Withdraw1, SUM(Deposit) 
         as Depo, Date3 from room_expenses group by Date3 order by Expenses_ID DESC Limit 50;"));
         $data720="";
@@ -85,7 +97,7 @@ class AdminAuthController extends Controller
         $chartdata=$data720;
         
         return view('home/dashboard',compact('data','contact','viewcontact','viewchat','roombalance'
-    ,'trnbalance','project','notes','chartdata'));
+    ,'trnbalance','project','notes','chartdata','projectchart','projectbudget','allproject'));
     }
 
    
