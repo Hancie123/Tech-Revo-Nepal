@@ -1,7 +1,8 @@
 @include("layouts/adminsidemenu")
 @push('title')
 <title>Admin Dashboard | Notes</title>
-
+<script src="https://cdn.tiny.cloud/1/z6amzuaurphk5l6v49xbiygcnmsuc2yfna63qag71vcnr6lg/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"></script>
 
 
 <main id="main" class="main">
@@ -41,7 +42,23 @@
             @enderror
         </span> <br>
 
-        <textarea class="form-control" rows="15" name="note"></textarea>
+
+        <textarea name="note">
+     Welcome {{Session::get('name')}}
+  </textarea>
+
+
+        <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+        </script>
+
+
+
+
         <span>
             @error('note')
             <script>
@@ -56,24 +73,7 @@
     </form>
 
 
-
-
 </main>
-
-<script>
-ClassicEditor
-    .create(document.querySelector('#editor'))
-    .then(editor => {
-        console.log(editor);
-    })
-    .catch(error => {
-        console.error(error);
-    });
-</script>
-
-</body>
-
-
-@include(" layouts/adminfooter")
+</body>@include(" layouts/adminfooter")
 
 </html>

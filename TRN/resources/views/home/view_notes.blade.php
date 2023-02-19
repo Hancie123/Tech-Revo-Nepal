@@ -3,6 +3,7 @@
 <title>Admin Dashboard | View Notes</title>
 
 
+
 <main id="main" class="main">
 
     <div class="pagetitle">
@@ -46,7 +47,7 @@
                     <td>{{$note['note_id']}}</td>
                     <td>{{$note['title']}}</td>
                     <td>{{$note['updated_at']->diffForHumans()}}</td>
-                    <td style="display:none;"> {{print($note->notes)}}</td>
+                    <td style="display:none;"> {!!$note->notes!!}</td>
                     <td>
                         <button class="btnEdit btn btn-primary"><i class="bi bi-eye"></i></button>
                         <button class="btnEdit btn btn-success"><i class="bi bi-pencil-square"></i></button>
