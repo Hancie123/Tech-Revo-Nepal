@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Contacts;
 use App\Models\Admin;
 use App\Models\ChatModel;
+use App\Models\AnnouncementModel;
 
 class ProfileController extends Controller
 {
@@ -15,7 +16,10 @@ class ProfileController extends Controller
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
         $user=Admin::all();
-        return view('home/profile',compact('contact','viewcontact','viewchat','user'));
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
+        
+        return view('home/profile',compact('contact','viewcontact','viewchat','user','announce','announceall'));
     }
 
     public function editprofile(Request $request,$id){

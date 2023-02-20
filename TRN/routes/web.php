@@ -13,6 +13,7 @@ use App\Http\Controllers\RoomExpensesController;
 use App\Http\Controllers\TRNFinanceController;
 use App\Http\Controllers\TRNProjectController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\AnnouncementController;
 use App\Models\Admin;
 
 /*
@@ -43,6 +44,10 @@ Route::get('/customerview',[admincontroller::class,'viewadmin']);
 
 Route::get('/home/dashboard',[AdminAuthController::class,'dashboard'])->middleware('isLoggedIn');
 Route::get('/home/dashboard/logout',[AdminAuthController::class,'logout']);
+
+
+Route::post('/home/dashboard/insertannouncement',[AnnouncementController::class,'insertdata'])->middleware('isLoggedIn');
+Route::get('/home/dashboard/deleteannouncement/{id}',[AnnouncementController::class,'deletedata'])->middleware('isLoggedIn');
 
 
 Route::get('/home/profile',[ProfileController::class,'profile'])->middleware('isLoggedIn');

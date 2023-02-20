@@ -7,6 +7,7 @@ use App\Models\Contacts;
 use App\Models\ProjectModel;
 use DB;
 use App\Models\ChatModel;
+use App\Models\AnnouncementModel;
 
 class TRNProjectController extends Controller
 {
@@ -27,12 +28,14 @@ class TRNProjectController extends Controller
         }
         
         $chartdata=$data720;
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
 
         
 
         
         return view('home/trn_projects',compact('contact','viewcontact','table','countproject',
-        'activeproject','completeproject','pendingproject','chartdata','viewchat'));
+        'activeproject','completeproject','pendingproject','chartdata','viewchat','announce','announceall'));
     }
 
     public function insertdata(Request $request){

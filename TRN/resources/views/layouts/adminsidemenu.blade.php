@@ -242,6 +242,20 @@
                         </li>
 
 
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#insertannouncement">
+                                <i class="bi bi-megaphone"></i>
+                                <span>Announcements</span>
+                            </a>
+                        </li>
+
+
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -249,7 +263,7 @@
                         <li>
                             <a class="dropdown-item d-flex align-items-center btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#aboutmodel">
-                                <i class="bi bi-file-person-fill"></i>
+                                <i class="bi bi-people"></i>
                                 <span>About Us</span>
                             </a>
                         </li>
@@ -275,6 +289,133 @@
         </nav><!-- End Icons Navigation -->
 
     </header><!-- End Header -->
+
+
+    @if($announce==1)
+    <!-- The Anouncmenet Modal -->
+    <div class="modal" id="insertannouncement">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Active Announcement</h4>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="{{url('/home/dashboard/insertannouncement')}}" method="post">
+                        @if(Session::has('announcesuccess'))
+                        <script>
+                        toastr.success("{{Session::get('announcesuccess')}}")
+                        </script>
+                        @endif
+                        @if(Session::has('announcefail'))
+                        <script>
+                        toastr.fail("{{Session::get('announcefail')}}")
+                        </script>
+                        @endif
+                        @csrf
+
+                        <div class="w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border-amber">
+                            <p>To make a new announcement, you should first remove the existing one.</p>
+                        </div>
+
+
+
+                        <table class="table table-borderless">
+                            <tr class="3-centerw border">
+                                <th>Title</th>
+                                <th>Announcement</th>
+                                <th>Action</th>
+                            </tr>
+                            @foreach($announceall as $data)
+                            <tr>
+                                <td>{{$data->title}}</td>
+                                <td>{{$data->announcement}}</td>
+                                <td><a href="{{url('/home/dashboard/deleteannouncement')}}/{{$data->announce_id}}">
+                                        <i class='bx bx-trash bx-md'></i>
+                                    </a></td>
+                            </tr>
+                            @endforeach
+                        </table>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @else
+    <!-- The Anouncmenet Modal -->
+    <div class="modal" id="insertannouncement">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Announcements</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="{{url('/home/dashboard/insertannouncement')}}" method="post">
+                        @if(Session::has('announcesuccess'))
+                        <script>
+                        toastr.success("{{Session::get('announcesuccess')}}")
+                        </script>
+                        @endif
+                        @if(Session::has('announcefail'))
+                        <script>
+                        toastr.fail("{{Session::get('failannouncefail')}}")
+                        </script>
+                        @endif
+                        @csrf
+                        <input type="hidden" value="{{Session::get('admin_id')}}" name="admin_id" type="text">
+
+                        <label class="w3-text"><b>Announcement Title</b></label>
+                        <input class="w3-input w3-border w3-round" type="text" name="announcementtitle">
+                        <span>
+                            @error('announcementtitle')
+                            <script>
+                            toastr.warning('{{$message}}')
+                            </script>
+                            @enderror
+                        </span>
+                        <br>
+
+                        <label class="w3-text"><b>Message</b></label>
+                        <textarea class="w3-input w3-border w3-round" rows="5" type="text"
+                            name="announcement"></textarea>
+                        <span>
+                            @error('announcement')
+                            <script>
+                            toastr.warning('{{$message}}')
+                            </script>
+                            @enderror
+                        </span>
+                        <br>
+                        <button tyle="submit" class="w3-btn bg-primary w3-round text-white">Announce</button>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @endif
+
 
 
     <!----------------------- About Us Model ----------------------->
@@ -457,5 +598,7 @@
 
 
         </ul>
+
+
 
     </aside><!-- End Sidebar-->

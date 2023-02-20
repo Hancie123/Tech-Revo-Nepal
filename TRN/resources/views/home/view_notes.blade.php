@@ -51,9 +51,7 @@
                     <td>
                         <button class="btnEdit btn btn-primary"><i class="bi bi-eye"></i></button>
 
-                        <a href="$note->note_id" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal720"><i class="bi bi-pencil-square"></i>
-                        </a>
+
 
                         <a href="{{url('/home/notes/view_notes/delete')}}/{{$note->note_id}}">
                             <button class="btn btn-danger"><i class="bi bi-x-circle-fill"></i></button>
@@ -74,31 +72,7 @@
     </div>
 
 
-    @foreach($notes as $note)
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal720" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form method="post">
-                        @csrf
 
-                        <p>{{ $note->title}}</p>
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    @endforeach
 
 
     <!-- Modal -->

@@ -8,6 +8,7 @@ use App\Models\Contacts;
 use App\Models\Room_Expenses;
 use DB;
 use App\Models\ChatModel;
+use App\Models\AnnouncementModel;
 
 class TRNFinanceController extends Controller
 {
@@ -28,10 +29,12 @@ class TRNFinanceController extends Controller
         }
         
         $chartdata=$data720;
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
         
         
         return view('home/trn_finance_system',compact('contact','deposittable',
-        'withdrawtable','room','deposit','viewcontact','balance','withdraw','chartdata','viewchat'));
+        'withdrawtable','room','deposit','viewcontact','balance','withdraw','chartdata','viewchat','announce','announceall'));
     }
 
     public function trndepositmoney(){
@@ -39,7 +42,9 @@ class TRNFinanceController extends Controller
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $deposittable=trnfinance::select("*")->where('Status','=','Deposit')->orderByDesc("TRN_ID")->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
-        return view('home/trn_deposit_money',compact('contact','viewcontact','deposittable','viewchat'));
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
+        return view('home/trn_deposit_money',compact('contact','viewcontact','deposittable','viewchat','announce','announceall'));
     }
 
 
@@ -48,7 +53,9 @@ class TRNFinanceController extends Controller
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $withdrawtable=trnfinance::select("*")->where('Status','=','Withdraw')->orderBy('TRN_ID','asc')->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
-        return view('home/trn_withdraw_money',compact('contact','viewcontact','withdrawtable','viewchat'));
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
+        return view('home/trn_withdraw_money',compact('contact','viewcontact','withdrawtable','viewchat','announce','announceall'));
     }
 
 

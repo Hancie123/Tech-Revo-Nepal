@@ -3,7 +3,6 @@
 <title>Admin Dashboard</title>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-
 <main id="main" class="main">
 
     <div class="pagetitle">
@@ -16,6 +15,69 @@
         </nav>
     </div><!-- End Page Title -->
 
+    @if($announce==1)
+    <!--------------------- The Announcement Modal -------------------->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Announcements</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    @foreach($announceall as $data)
+                    <p class="w3-center p-0 m-0">{{$data->title}}</p>
+                    <hr class="solid">
+                    <style>
+                    hr {
+                        display: block;
+                        margin-top: 0.5em;
+                        margin-bottom: 0.5em;
+                        margin-left: auto;
+                        margin-right: auto;
+                        border-style: inset;
+                        border-width: 1px;
+                    }
+                    </style>
+                    <p class="p-2 m-2">{{$data->announcement}}</p><br>
+
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <p class="text-start">Posted: {{$data['created_at']->todatestring()}}</p>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+                </div>
+                @endforeach
+
+            </div>
+        </div>
+    </div>
+    @else
+    @endif
+
+
+    <script type="text/javascript">
+    window.onload = function() {
+        OpenBootstrapPopup();
+    };
+
+    function OpenBootstrapPopup() {
+        $("#myModal").modal('show');
+    }
+    </script>
+
+
+
+
+    <!------------------------------ Balance system container -------------------------->
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-xxl-5 d-flex">
@@ -262,6 +324,10 @@
         </div>
 
     </div>
+
+
+
+
 
 
 

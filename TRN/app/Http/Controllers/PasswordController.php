@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\password;
 use App\Models\Contacts;
 use App\Models\ChatModel;
+use App\Models\AnnouncementModel;
 
 
 class PasswordController extends Controller
@@ -40,7 +41,9 @@ class PasswordController extends Controller
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
-        return view('/home/passwords',compact('password','contact','viewcontact','viewchat'));
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
+        return view('/home/passwords',compact('password','contact','viewcontact','viewchat','announce','announceall'));
         
         
     }

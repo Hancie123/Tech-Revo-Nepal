@@ -13,6 +13,7 @@ use App\Models\Room_Expenses;
 use App\Models\TRNFinance;
 use App\Models\ProjectModel;
 use App\Models\Notes;
+use App\Models\AnnouncementModel;
 
 class AdminAuthController extends Controller
 {
@@ -61,6 +62,9 @@ class AdminAuthController extends Controller
         //     return redirect('login');
         // }
         $contact=contacts::count();
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
+        
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
         
@@ -97,7 +101,7 @@ class AdminAuthController extends Controller
         $chartdata=$data720;
         
         return view('home/dashboard',compact('data','contact','viewcontact','viewchat','roombalance'
-    ,'trnbalance','project','notes','chartdata','projectchart','projectbudget','allproject'));
+    ,'trnbalance','project','notes','chartdata','projectchart','projectbudget','allproject','announce','announceall'));
     }
 
    

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Notes;
 use App\Models\Contacts;
 use App\Models\ChatModel;
+use App\Models\AnnouncementModel;
 
 class NotesController extends Controller
 {
@@ -14,7 +15,9 @@ class NotesController extends Controller
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
-        return view('/home/notes',compact('contact','viewcontact','viewchat'));
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
+        return view('/home/notes',compact('contact','viewcontact','viewchat','announce','announceall'));
     }
 
     public function ViewNotes(){
@@ -23,7 +26,9 @@ class NotesController extends Controller
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
-        return view('/home/view_notes',compact('notes','contact','viewcontact','viewchat'));
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
+        return view('/home/view_notes',compact('notes','contact','viewcontact','viewchat','announce','announceall'));
     }
 
  
