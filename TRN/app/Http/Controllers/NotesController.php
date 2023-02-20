@@ -26,6 +26,8 @@ class NotesController extends Controller
         return view('/home/view_notes',compact('notes','contact','viewcontact','viewchat'));
     }
 
+ 
+
 
     public function countNotes(){
         $notescount=notes::count();
