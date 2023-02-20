@@ -22,7 +22,7 @@ class NotesController extends Controller
 
     public function ViewNotes(){
          
-        $notes=notes::all();
+        $notes=notes::orderBy('note_id','desc')->get();
         $contact=contacts::count();
         $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
         $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
