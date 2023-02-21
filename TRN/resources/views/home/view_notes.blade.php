@@ -4,6 +4,7 @@
 
 
 
+
 <main id="main" class="main">
 
     <div class="pagetitle">
@@ -74,7 +75,8 @@
         </div>
         <div class="w3-twothird w3-container">
 
-            <textarea class="form-control py-3 my-3" rows="21" id="txtName" name="note"></textarea>
+            <textarea class="w3-input w3-animate-input w3-border w3-round py-3 my-3" rows="21" id="txtName" name="note"
+                readonly></textarea>
         </div>
     </div>
 
@@ -112,6 +114,9 @@
 
 
 </main>
+
+
+
 
 <script>
 $(".btnEdit").click(function() {
