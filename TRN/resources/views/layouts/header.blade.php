@@ -58,7 +58,7 @@
                 <li><a href="{{url('/')}}#portfolio">Portfolio</a></li>
                 <li><a href="{{url('/')}}#team">Team</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->
-                <li class="dropdown"><a href="#"><span>Drop Down</span> <i
+                <li class="dropdown"><a href="#"><span>Products</span> <i
                             class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
                         <li><a href="#">Drop Down 1</a></li>
