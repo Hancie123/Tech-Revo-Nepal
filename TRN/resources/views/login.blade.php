@@ -1,6 +1,6 @@
 @push('title')
 <title>Tech Revo Login System</title>
-@include('layouts\header')
+@include('layouts.header')
 <link rel="stylesheet" href={{asset('cssfiles\login.css')}}>
 
 <section class="position-relative py-4 py-xl-5 w3-animate-top">
@@ -171,4 +171,4 @@ input:valid~label {
 </style>
 
 
-@include('layouts\footer')
+@include('layouts.footer')

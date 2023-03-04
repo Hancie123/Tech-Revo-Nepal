@@ -1,6 +1,6 @@
 @push('title')
 <title>Tech Revo System | Create an Account</title>
-@include('layouts\header')
+@include('layouts.header')
 
 
 <div class="container">
@@ -90,4 +90,4 @@
 
 
 
-@include('layouts\footer')
+@include('layouts.footer')

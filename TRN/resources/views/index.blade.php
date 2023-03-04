@@ -27,7 +27,7 @@
                         well as web applications.</p>
                     <div class="d-flex justify-content-center justify-content-lg-start">
                         <a href="#about" class="btn-get-started">Get Started</a>
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                        <a href="https://youtu.be/gRf81OwxRBk"
                             class="glightbox btn-watch-video d-flex align-items-center"><i
                                 class="bi bi-play-circle"></i><span>Watch Video</span></a>
                     </div>
@@ -337,8 +337,7 @@
 
                 <div class="section-header">
                     <h2>Portfolio</h2>
-                    <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et
-                        autem uia reprehenderit sunt deleniti</p>
+                    <p>Please have a look to our projects</p>
                 </div>
 
                 <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
@@ -605,10 +604,10 @@
                     <div class="col-lg-4">
                         <div class="content px-xl-5">
                             <h3>Frequently Asked <strong>Questions</strong></h3>
-                            <p>
+                            <!-- <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                            </p>
+                            </p> -->
                         </div>
                     </div>
 
@@ -621,14 +620,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#faq-content-1">
                                         <span class="num">1.</span>
-                                        Non consectetur a erat nam at lectus urna duis?
+                                        What is TRN?
                                     </button>
                                 </h3>
                                 <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                     <div class="accordion-body">
-                                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
-                                        laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor
-                                        rhoncus dolor purus non.
+                                        Tech Revo is a IT company based in Nepal that was founded in 2022. They
+                                        specialize in creating a wide range of applications such as android, desktop and
+                                        web applications.
                                     </div>
                                 </div>
                             </div><!-- # Faq item-->
@@ -638,15 +637,12 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#faq-content-2">
                                         <span class="num">2.</span>
-                                        Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                                        When TRN is established?
                                     </button>
                                 </h3>
                                 <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                     <div class="accordion-body">
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                        interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                        scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-                                        Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                                        Tech Revo Nepal is a IT company based in Nepal that was established in 2022.
                                     </div>
                                 </div>
                             </div><!-- # Faq item-->
@@ -656,15 +652,17 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#faq-content-3">
                                         <span class="num">3.</span>
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                                        Who are the members of Tech Revo Nepal
                                     </button>
                                 </h3>
                                 <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                     <div class="accordion-body">
-                                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
-                                        Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl
-                                        suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis
-                                        convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                                        <ul>
+                                            <li>Hancie Phago</li>
+                                            <li>Nitesh Hamal</li>
+                                            <li>Ajaya Timsina</li>
+                                            <li>Aveshesh KC</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div><!-- # Faq item-->
@@ -674,15 +672,18 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#faq-content-4">
                                         <span class="num">4.</span>
-                                        Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                                        What kind of services does TRN offer?
                                     </button>
                                 </h3>
                                 <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                     <div class="accordion-body">
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                        interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                        scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-                                        Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                                        <ul>
+                                            <li>Web Application</li>
+                                            <li>Website Design</li>
+                                            <li>Android Application</li>
+                                            <li>Desktop Application</li>
+                                            <li>Graphic Design</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div><!-- # Faq item-->
@@ -692,15 +693,12 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#faq-content-5">
                                         <span class="num">5.</span>
-                                        Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                                        How do we get in touch with you?
                                     </button>
                                 </h3>
                                 <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                     <div class="accordion-body">
-                                        Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim
-                                        suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan.
-                                        Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit
-                                        turpis cursus in
+                                        You can reach us at 9825915122 or via email at techrevolutionnepal@gmail.com.
                                     </div>
                                 </div>
                             </div><!-- # Faq item-->
@@ -930,11 +928,15 @@
 
     </main><!-- End #main -->
 
+    <script>
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+    }, false);
+    </script>
 
 
 
-
-    @include('layouts\footer')
+    @include('layouts.footer')
 
 </body>
 

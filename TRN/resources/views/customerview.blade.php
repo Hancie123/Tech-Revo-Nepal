@@ -1,4 +1,4 @@
-@include('layouts\header')
+@include('layouts.header')
 
 
 
@@ -228,4 +228,4 @@ $(document).ready(function() {
 </script>
 
 
-@include('layouts\footer')
+@include('layouts.footer')

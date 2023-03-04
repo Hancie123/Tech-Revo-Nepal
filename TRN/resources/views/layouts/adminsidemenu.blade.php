@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     @stack('title')
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -182,7 +183,7 @@
                                 <input type="hidden" value="{{Session::get('admin_id')}}" name="admin_id" type="text">
                                 <input type="hidden" value="{{Session::get('name')}}" name="name" type="text">
                                 <div class="input-group w3-display-bottommiddle p-4">
-                                    <textarea class="form-control" rows="2" id="comment" name="message"></textarea>
+                                    <input type="text" class="form-control" id="comment" name="message">
                                     <button class="btn btn-success" type="submit">Send</button>
 
                                 </div>
@@ -559,17 +560,17 @@
                 </a>
                 <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="charts-chartjs.html">
+                        <a href="#">
                             <i class="bi bi-circle"></i><span>Room Expenses Report</span>
                         </a>
                     </li>
                     <li>
-                        <a href="charts-apexcharts.html">
+                        <a href="#">
                             <i class="bi bi-circle"></i><span>TRN Finances Report</span>
                         </a>
                     </li>
                     <li>
-                        <a href="charts-echarts.html">
+                        <a href="#">
                             <i class="bi bi-circle"></i><span>Projects Report</span>
                         </a>
                     </li>

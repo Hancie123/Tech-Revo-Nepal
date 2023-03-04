@@ -39,7 +39,7 @@
                                         Rs
                                     </div>
                                     <div class="ps-3">
-                                        <h6>{{$balance}}</h6>
+                                        <h6><?php echo number_format($balance)?></h6>
 
 
                                     </div>
@@ -61,7 +61,7 @@
                                         Rs
                                     </div>
                                     <div class="ps-3">
-                                        <h6>{{$deposit}}</h6>
+                                        <h6><?php echo number_format($deposit)?></h6>
 
 
                                     </div>
@@ -83,7 +83,7 @@
                                         Rs
                                     </div>
                                     <div class="ps-3">
-                                        <h6>{{$withdraw}}</h6>
+                                        <h6><?php echo number_format($withdraw); ?></h6>
                                     </div>
                                 </div>
                             </div>
@@ -237,7 +237,8 @@
                                             <tr>
                                                 <td>{{$data['Expenses_ID']}}</td>
                                                 <td>{{$data['Date']}}</td>
-                                                <td>Rs. {{$data['Deposit']}}</td>
+                                                <td>Rs. <?php echo number_format($data['Deposit'])?>
+                                                </td>
                                                 <td>{{$data['Remark']}}</td>
                                             </tr>
 
@@ -284,7 +285,9 @@
                                             <tr>
                                                 <td>{{$data1['Expenses_ID']}}</td>
                                                 <td>{{$data1['Date']}}</td>
-                                                <td>Rs. {{$data1['Withdraw']}}</td>
+                                                <td>Rs.
+                                                    <?php echo number_format($data1['Withdraw'])?>
+                                                </td>
                                                 <td>{{$data1['Remark']}}</td>
                                             </tr>
 
@@ -358,7 +361,8 @@
                                 title: 'Budget Report'
                             };
 
-                            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                            var chart = new
+                            google.visualization.PieChart(document.getElementById('piechart'));
 
                             chart.draw(data, options);
                         }
