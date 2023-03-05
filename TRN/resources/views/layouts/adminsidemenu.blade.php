@@ -183,8 +183,22 @@
                                 <input type="hidden" value="{{Session::get('admin_id')}}" name="admin_id" type="text">
                                 <input type="hidden" value="{{Session::get('name')}}" name="name" type="text">
                                 <div class="input-group w3-display-bottommiddle p-4">
-                                    <input type="text" class="form-control" id="comment" name="message">
-                                    <button class="btn btn-success" type="submit">Send</button>
+
+
+
+
+                                    <textarea type="text" class="form-control" id="comment" name="message"></textarea>
+                                    <button id="submitchat" class="btn btn-success" type="submit">Send</button>
+
+                                    <script>
+                                    var input = document.getElementById("comment");
+                                    input.addEventListener("keypress", function(event) {
+                                        if (event.key === "Enter") {
+                                            event.preventDefault();
+                                            document.getElementById("submitchat").click();
+                                        }
+                                    });
+                                    </script>
 
                                 </div>
                                 <span>
@@ -432,11 +446,15 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <p>Tech Revo is an IT company based in Nepal that was founded in 2022. They specialize in creating a
-                        wide range of applications such as android, desktop and web applications. They have a team of
-                        experienced professionals led by CEO Hancie Phago, that provides a wide range of services to
+                    <p>Tech Revo is an IT company based in Nepal that was founded in 2022. They
+                        specialize in creating a
+                        wide range of applications such as android, desktop and web applications. They
+                        have a team of
+                        experienced professionals led by CEO Hancie Phago, that provides a wide range of
+                        services to
                         their
-                        clients. These services include web development, android development, graphic design, desktop
+                        clients. These services include web development, android development, graphic
+                        design, desktop
                         application development, iOS application development and website design.</p>
                     <br>
                     <p>Developers:</p>
@@ -560,7 +578,7 @@
                 </a>
                 <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="#">
+                        <a href="{{url('/home/room_reports')}}">
                             <i class="bi bi-circle"></i><span>Room Expenses Report</span>
                         </a>
                     </li>

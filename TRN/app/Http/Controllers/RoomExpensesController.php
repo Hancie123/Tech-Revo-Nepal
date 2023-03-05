@@ -114,4 +114,45 @@ class RoomExpensesController extends Controller
         }
         
     }
+
+
+    public function room_report(){
+
+        $contact=contacts::count();
+        $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
+        
+        $result=DB::select(DB::raw("SELECT SUM(Withdraw) as Withdraw1, SUM(Deposit) 
+        as Depo, Date3 from room_expenses group by Date3 order by Expenses_ID DESC;"));
+        $data720="";
+        foreach($result as $val){
+            $data720.="['".$val->Date3."',    ".$val->Withdraw1.", ".$val->Depo." ],";
+        }
+        $chartdata=$data720;
+
+
+
+        $dailydata1=DB::select(DB::raw("Select sum(Deposit) as Depo,Remark from room_expenses 
+        Where status='Deposit' and date(created_at) = current_date group by Remark;"));
+        $dailynum1="";
+        foreach($dailydata1 as $val){
+            $dailynum1.="['".$val->Remark."', ".$val->Depo." ],";
+        }
+        $dailychart1=$dailynum1;
+
+
+        $dailydata2=DB::select(DB::raw("Select sum(Withdraw) as withdraw,Remark from room_expenses 
+        Where status='Withdraw' and date(created_at) = current_date group by Remark;"));
+        $dailynum2="";
+        foreach($dailydata2 as $val){
+            $dailynum2.="['".$val->Remark."', ".$val->withdraw." ],";
+        }
+        $dailychart2=$dailynum2;
+
+
+        return view('home/room_report',compact('dailychart1','dailychart2','contact','viewcontact','viewchat','announce','announceall','chartdata'));
+        
+    }
 }

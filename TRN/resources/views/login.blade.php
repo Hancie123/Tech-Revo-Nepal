@@ -51,22 +51,46 @@
 
                             <div class="mb-3 w3-animate-right">
                                 <div class="input-field">
-                                    <input type="password" name="password" required spellcheck="false">
+                                    <input type="password" id="myInput" name="password" required spellcheck="false">
                                     <label>Enter password</label>
                                 </div>
-
                                 <span class="text-danger">
                                     @error('password')
                                     {{$message}}
                                     @enderror
                                 </span>
+                                <p type="hidden" id="text">Caps lock is ON.</p>
+                                <style>
+                                #text {
+                                    display: none;
+                                    color: red
+                                }
+                                </style>
+
+
                             </div>
+
 
                             <div class="mb-3"><button class="btn btn-success d-block w-100" type="submit">Login</button>
                             </div>
 
 
                         </form>
+
+                        <script>
+                        var input = document.getElementById("myInput");
+                        var text = document.getElementById("text");
+                        input.addEventListener("keyup", function(event) {
+
+                            if (event.getModifierState("CapsLock")) {
+                                text.style.display = "block";
+                            } else {
+                                text.style.display = "none"
+                            }
+                        });
+                        </script>
+
+
 
                         <!-- Button to Open the Modal -->
                         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">

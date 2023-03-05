@@ -61,7 +61,7 @@
                             </div>
                             <div class="w3-container w3-cell w3-mobile">
                                 <label class="w3-text"><b>Password</b></label>
-                                <input class="w3-input w3-border w3-round" name="password" type="text">
+                                <input class="w3-input w3-border w3-round" id="myInput" name="password" type="password">
                                 <span>
                                     @error('password')
                                     <script>
@@ -69,7 +69,21 @@
                                     </script>
                                     @enderror
                                 </span>
+                                <input class="w3-left-align" type="checkbox" id="passwordshow720"
+                                    onclick="myFunction()"><label for="passwordshow720">Show
+                                    Password</label>
                             </div>
+
+                            <script>
+                            function myFunction() {
+                                var x = document.getElementById("myInput");
+                                if (x.type === "password") {
+                                    x.type = "text";
+                                } else {
+                                    x.type = "password";
+                                }
+                            }
+                            </script>
 
                         </div>
                         <br>
@@ -160,4 +174,4 @@ document.addEventListener("contextmenu", function(e) {
 </script>
 
 
-@include(" layouts/adminfooter")
+@include(" layouts.adminfooter")

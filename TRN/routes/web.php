@@ -61,9 +61,9 @@ Route::post('/home/dashboard',[ChatController::class,'insertchat'])->middleware(
 
 
 Route::get('/home/passwords',[indexcontroller::class,'password'])->middleware('isLoggedIn');
-Route::post('/home/passwords',[PasswordController::class,'password']);
-Route::get('/home/passwords',[PasswordController::class,'viewpassword'])->name('home.passwords');
-Route::get('/home/passwords/{id}',[PasswordController::class,'deletepassword']);
+Route::post('/home/passwords',[PasswordController::class,'password'])->middleware('isLoggedIn');
+Route::get('/home/passwords',[PasswordController::class,'viewpassword'])->middleware('isLoggedIn')->name('home.passwords');
+Route::get('/home/passwords/{id}',[PasswordController::class,'deletepassword'])->middleware('isLoggedIn');
 
 
 Route::get('/home/notes',[NotesController::class,'Notes'])->middleware('isLoggedIn')->name('home.notes');
@@ -93,3 +93,5 @@ Route::post('/home/trn_finance_system/withdraw_money',[TRNFinanceController::cla
 Route::get('/home/trn_projects',[TRNProjectController::class,'trnproject'])->middleware('isLoggedIn');
 Route::post('/home/trn_projects',[TRNProjectController::class,'insertdata'])->middleware('isLoggedIn');
 Route::get('/home/trn_projects/delete/{id}',[TRNProjectController::class,'deletedata'])->middleware('isLoggedIn');
+
+Route::get('/home/room_reports',[RoomExpensesController::class,'room_report'])->middleware('isLoggedIn')->name('home.room_reports');
