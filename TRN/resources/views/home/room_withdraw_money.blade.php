@@ -74,7 +74,8 @@
                 <div class="w3-container w3-cell w3-mobile">
 
                     <label class="form-label" for="firstname">Current Month:</label>
-                    <input type="text" class="form-control" name="date3" id="amount" value="January 2023" readonly>
+                    <input type="text" class="form-control" name="date3" id="amount" value="<?php echo date('F Y');?>"
+                        readonly>
                     <span>
                         @error('date3')
                         <script>

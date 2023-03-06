@@ -152,7 +152,25 @@ class RoomExpensesController extends Controller
         $dailychart2=$dailynum2;
 
 
-        return view('home/room_report',compact('dailychart1','dailychart2','contact','viewcontact','viewchat','announce','announceall','chartdata'));
+        $sevendaysdata=DB::select(DB::raw("SELECT SUM(Withdraw) as Withdraw1, SUM(Deposit) as 
+        Depo,Date3 from room_expenses Where date(created_at) >= now() - INTERVAL 7 day group by Date3 order by Expenses_ID DESC;"));
+        $sevenchart720="";
+        foreach($sevendaysdata as $val){
+            $sevenchart720.="['".$val->Date3."',    ".$val->Withdraw1.", ".$val->Depo." ],";
+        }
+        $weeklychart=$sevenchart720;
+
+
+        $monthlydata=DB::select(DB::raw("SELECT SUM(Withdraw) as Withdraw1, SUM(Deposit) as 
+        Depo,Date3 from room_expenses Where date(created_at) >= now() - INTERVAL 30 day group by Date3 order by Expenses_ID DESC;"));
+        $month720="";
+        foreach($monthlydata as $val){
+            $month720.="['".$val->Date3."',    ".$val->Withdraw1.", ".$val->Depo." ],";
+        }
+        $monthchart=$month720;
+
+
+        return view('home/room_report',compact('monthchart','weeklychart','dailychart1','dailychart2','contact','viewcontact','viewchat','announce','announceall','chartdata'));
         
     }
 }
