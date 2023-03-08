@@ -134,7 +134,6 @@ class RoomExpensesController extends Controller
         $chartdata=$data720;
 
 
-
         $dailydata1=DB::select(DB::raw("Select sum(Deposit) as Depo,Remark from room_expenses 
         Where status='Deposit' and date(created_at) = current_date group by Remark;"));
         $dailynum1="";
@@ -190,10 +189,42 @@ class RoomExpensesController extends Controller
     
         $invoices = Room_Expenses::where('Date3', $month)
             ->where('Status', $status)
+            ->orderBy('Expenses_ID', 'DESC')
             ->get();
 
 
         return view('home/room_statements', compact('invoices','expensesmonth','contact','viewcontact','viewchat','announce','announceall'));
+        
+    }
+
+
+    //delete function
+    public function deletedepositmoney($id){
+        
+        $deletedeposit=Room_Expenses::find($id);
+        if(!is_null($deletedeposit)){
+            $deletedeposit->delete();
+            return redirect('/home/room_management/deposit_money')->with('success',"The Amount deposited is deleted successfully");
+        }
+        else{
+            return redirect('/home/room_management/deposit_money')->with('fail',"Error Occurred");
+        }
+        
+        
+    }
+
+    //delete function
+    public function deletewithdrawmoney($id){
+        
+        $deletedeposit=Room_Expenses::find($id);
+        if(!is_null($deletedeposit)){
+            $deletedeposit->delete();
+            return back()->with('success',"The amount is deleted successfully");
+        }
+        else{
+            return back()->with('fail',"Error Occurred");
+        }
+        
         
     }
 }

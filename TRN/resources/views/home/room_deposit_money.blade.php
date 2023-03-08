@@ -127,6 +127,7 @@
                                 <th>Date</th>
                                 <th>Deposit</th>
                                 <th>Deposited By</th>
+                                <th>Action</th>
 
                             </tr>
 
@@ -139,6 +140,10 @@
                                 <td>{{$data['Date']}}</td>
                                 <td>Rs. {{$data['Deposit']}}</td>
                                 <td>{{$data['Remark']}}</td>
+                                <td><a href="{{url('/home/room_management/deposit_money/delete/')}}/{{$data->Expenses_ID}}"
+                                        class="btn-danger text-danger">Delete
+
+                                    </a></td>
                             </tr>
 
                             @endforeach

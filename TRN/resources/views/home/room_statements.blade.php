@@ -78,7 +78,14 @@
 
                     <td>{{$data->Expenses_ID}}</td>
                     <td>{{$data->Date}}</td>
-                    <td>{{$data->Deposit}} {{$data->Withdraw}}</td>
+                    <td>
+                        @if($data->Status=='Deposit')
+                        Rs. <?php echo number_format($data['Deposit']); ?>
+                        @else
+                        Rs. <?php echo number_format($data['Withdraw']);?>
+                        @endif
+
+                    </td>
                     <td>{{$data->Remark}}</td>
 
                 </tr>

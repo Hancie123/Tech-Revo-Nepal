@@ -234,8 +234,8 @@
                                 <h5 class="card-title">View Statements</h5>
 
                                 <div class="d-flex align-items-center">
-                                    <div
-                                        class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center
+                                        justify-content-center">
                                         <i class="bi bi-activity"></i>
                                     </div>
                                     <div class="ps-3">
