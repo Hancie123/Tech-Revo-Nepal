@@ -10,6 +10,7 @@ use App\Models\ChatModel;
 use App\Models\AnnouncementModel;
 
 
+
 class RoomExpensesController extends Controller
 {
     public function roomexpenses(){
@@ -162,7 +163,8 @@ class RoomExpensesController extends Controller
 
 
         $monthlydata=DB::select(DB::raw("SELECT SUM(Withdraw) as Withdraw1, SUM(Deposit) as 
-        Depo,Date3 from room_expenses Where date(created_at) >= now() - INTERVAL 30 day group by Date3 order by Expenses_ID DESC;"));
+        Depo,Date3 from room_expenses Where date(created_at) >= now() - INTERVAL 30 
+        day group by Date3 order by Expenses_ID DESC;"));
         $month720="";
         foreach($monthlydata as $val){
             $month720.="['".$val->Date3."',    ".$val->Withdraw1.", ".$val->Depo." ],";
@@ -171,6 +173,27 @@ class RoomExpensesController extends Controller
 
 
         return view('home/room_report',compact('monthchart','weeklychart','dailychart1','dailychart2','contact','viewcontact','viewchat','announce','announceall','chartdata'));
+        
+    }
+
+    public function room_statements(Request $request){
+        $contact=contacts::count();
+        $viewcontact=contacts::orderBy('contact_id','desc')->take(4)->get();
+        $viewchat=ChatModel::orderBy('chat_id','desc')->take(500)->get();
+        $announce=AnnouncementModel::count();
+        $announceall=AnnouncementModel::all();
+        $expensesmonth=DB::select(DB::raw("SELECT Date3 FROM room_expenses GROUP BY Date3 ORDER BY Expenses_ID DESC"));
+
+
+        $month = $request->input('month');
+        $status = $request->input('status');
+    
+        $invoices = Room_Expenses::where('Date3', $month)
+            ->where('Status', $status)
+            ->get();
+
+
+        return view('home/room_statements', compact('invoices','expensesmonth','contact','viewcontact','viewchat','announce','announceall'));
         
     }
 }

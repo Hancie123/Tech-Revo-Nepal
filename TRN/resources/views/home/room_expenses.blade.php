@@ -110,10 +110,51 @@
                                     </li>
 
                                     <li><a class="dropdown-item"
-                                            href="{{url('home/room_management/deposit_money')}}">Open</a></li>
+                                            href="{{url('home/room_management/deposit_money')}}">Open</a>
+
+                                        <button type="button" class="dropdown-item btn btn-primary"
+                                            data-bs-toggle="modal" data-bs-target="#myModal">
+                                            Deposit to Bank
+                                        </button>
+
+
+                                    </li>
 
                                 </ul>
                             </div>
+                            <!---------------------- Deposit to Bank Model ------------------>
+                            <!-- The Modal -->
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Hancie Phago NIC Asia Bank Account</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <img src="{{URL::asset('assets/IMG_0837.JPG')}}"
+                                                class="img-fluid mx-auto d-block" alt="Bank QR">
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!----------------------End Deposit to Bank Model ------------------>
+
+
+
+
 
                             <div class="card-body">
                                 <h5 class="card-title">Deposit Money</h5>
@@ -183,7 +224,8 @@
                                         <h6>Tools</h6>
                                     </li>
 
-                                    <li><a class="dropdown-item" href="#">Open</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="{{url('/home/room_management/room_statements')}}">Open</a></li>
 
                                 </ul>
                             </div>
@@ -197,7 +239,8 @@
                                         <i class="bi bi-activity"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <a href="#" class="h5 font-weight-bold">View Statements</a>
+                                        <a href="{{url('/home/room_management/room_statements')}}"
+                                            class="h5 font-weight-bold">View Statements</a>
 
 
                                     </div>
@@ -411,11 +454,11 @@
 
 </main>
 
-<script>
+<!-- <script>
 document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
 }, false);
-</script>
+</script> -->
 
 
 

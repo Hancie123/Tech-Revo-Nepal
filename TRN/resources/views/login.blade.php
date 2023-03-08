@@ -130,7 +130,7 @@
                             </div>
                         </div>
 
-                        <a href="/registration">No account? Register here!</a>
+
 
 
 
