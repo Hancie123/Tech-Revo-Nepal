@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\AnnouncementModel;
+use Mail;
 
 class AnnouncementController extends Controller
 {
@@ -16,6 +17,19 @@ class AnnouncementController extends Controller
                 'announcement'=>'required'
             ]
             );
+
+            $data = [
+                
+                'announcement' => $request->announcement,
+                'subject' => $request->announcementtitle,
+                'to'=>['hanciewanemphago@gmail.com', 'nitesh0hamal@gmail.com','azzaya2060@gmail.com'],
+                
+              ];
+              
+              Mail::send('mail', $data, function($message) use ($data) {
+                $message->to($data['to']);
+                $message->subject($data['subject']);
+              });
 
             $announce=new AnnouncementModel;
             $announce->title=$request['announcementtitle'];

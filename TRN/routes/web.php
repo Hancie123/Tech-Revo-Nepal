@@ -14,6 +14,7 @@ use App\Http\Controllers\TRNFinanceController;
 use App\Http\Controllers\TRNProjectController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\sendmail;
 use App\Models\Admin;
 
 /*
@@ -29,6 +30,9 @@ use App\Models\Admin;
 
 Route::get('/',[indexcontroller::class,'index']);
 Route::post('/',[ContactController::class,'storecontact']);
+
+
+Route::get('/mail',[sendmail::class,'index']);
 
 
 
