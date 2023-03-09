@@ -507,6 +507,12 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{route('home.dashboard.sendemails')}}">
+                            <i class="bi bi-circle"></i><span>Send Emails</span>
+                        </a>
+                    </li>
+
                 </ul>
             </li><!-- End Components Nav -->
 

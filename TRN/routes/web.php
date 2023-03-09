@@ -14,7 +14,7 @@ use App\Http\Controllers\TRNFinanceController;
 use App\Http\Controllers\TRNProjectController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\sendmail;
+use App\Http\Controllers\sendmailcontroller;
 use App\Models\Admin;
 
 /*
@@ -32,7 +32,7 @@ Route::get('/',[indexcontroller::class,'index']);
 Route::post('/',[ContactController::class,'storecontact']);
 
 
-Route::get('/mail',[sendmail::class,'index']);
+
 
 
 
@@ -102,3 +102,7 @@ Route::post('/home/trn_projects',[TRNProjectController::class,'insertdata'])->mi
 Route::get('/home/trn_projects/delete/{id}',[TRNProjectController::class,'deletedata'])->middleware('isLoggedIn');
 
 Route::get('/home/room_reports',[RoomExpensesController::class,'room_report'])->middleware('isLoggedIn')->name('home.room_reports');
+
+
+Route::get('/home/dashboard/sendemails',[sendmailcontroller::class,'index'])->middleware('isLoggedIn')->name('home.dashboard.sendemails');
+Route::post('/home/dashboard/sendemails',[sendmailcontroller::class,'sendemail'])->middleware('isLoggedIn')->name('home.dashboard.sendemails');
