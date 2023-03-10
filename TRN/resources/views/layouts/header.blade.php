@@ -61,20 +61,10 @@
                 <li class="dropdown"><a href="#"><span>Products</span> <i
                             class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                                    class="bi bi-chevron-down dropdown-indicator"></i></a>
-                            <ul>
-                                <li><a href="#">Deep Drop Down 1</a></li>
-                                <li><a href="#">Deep Drop Down 2</a></li>
-                                <li><a href="#">Deep Drop Down 3</a></li>
-                                <li><a href="#">Deep Drop Down 4</a></li>
-                                <li><a href="#">Deep Drop Down 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Drop Down 2</a></li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
+                        <li><a
+                                href="https://firebasestorage.googleapis.com/v0/b/wanem-dictionary.appspot.com/o/Tech%20Revo%20Nepal.exe?alt=media&token=13d1007f-202d-49cd-883a-0cd984fe464e">Tech
+                                Revo Nepal</a></li>
+
                     </ul>
                 </li>
                 <li><a href="{{url('/')}}#contact">Contact</a></li>

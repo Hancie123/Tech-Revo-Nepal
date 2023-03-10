@@ -27,7 +27,7 @@
                         well as web applications.</p>
                     <div class="d-flex justify-content-center justify-content-lg-start">
                         <a href="#about" class="btn-get-started">Get Started</a>
-                        <a href="https://youtu.be/gRf81OwxRBk"
+                        <a href="https://www.youtube.com/watch?v=Rpd5SJ8OzEg"
                             class="glightbox btn-watch-video d-flex align-items-center"><i
                                 class="bi bi-play-circle"></i><span>Watch Video</span></a>
                     </div>
@@ -132,7 +132,7 @@
 
                             <div class="position-relative mt-4">
                                 <img src="assets/img/TRN.jpg" class="img-fluid rounded-4" alt="">
-                                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+                                <a href="https://www.youtube.com/watch?v=Rpd5SJ8OzEg" class="glightbox play-btn"></a>
                             </div>
                         </div>
                     </div>
