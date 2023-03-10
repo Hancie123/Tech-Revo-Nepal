@@ -80,18 +80,26 @@
                     <td>{{$data->Date}}</td>
                     <td>
                         @if($data->Status=='Deposit')
-                        Rs. <?php echo number_format($data['Deposit']); ?>
+                        Rs. {{ number_format($data['Deposit']) }}
                         @else
-                        Rs. <?php echo number_format($data['Withdraw']);?>
+                        Rs. {{ number_format($data['Withdraw']) }}
                         @endif
 
                     </td>
                     <td>{{$data->Remark}}</td>
 
                 </tr>
+
+
                 @endif
 
                 @endforeach
+                <tr>
+                    <td>Total Amount</td>
+                    <td></td>
+                    <td id="total"></td>
+                    <td></td>
+                </tr>
             <tbody>
         </table>
     </div>
@@ -99,6 +107,18 @@
 
 
 </main>
+
+<script>
+var table = document.getElementById("hancie");
+var rows = table.rows;
+var total = 0;
+for (var i = 1; i < rows.length - 1; i++) {
+    var cells = rows[i].cells;
+    var amount = cells[2].innerText.trim().replace('Rs. ', '').replace(',', '');
+    total += parseFloat(amount);
+}
+document.getElementById("total").innerHTML = "Rs. " + total.toLocaleString('en-IN');
+</script>
 
 <script>
 function generate() {

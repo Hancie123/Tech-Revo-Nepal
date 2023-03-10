@@ -54,7 +54,7 @@ class RoomExpensesController extends Controller
 
         $request->validate([
             'date'=>'required',
-            'income'=>'required',
+            'income'=>'required|numeric',
             'remark'=>'required',
             'date3'=>'required',
         ]);
@@ -93,7 +93,7 @@ class RoomExpensesController extends Controller
 
         $request->validate([
             'date'=>'required',
-            'income'=>'required',
+            'income'=>'required|numeric',
             'remark'=>'required',
             'date3'=>'required',
         ]);
