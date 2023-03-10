@@ -22,7 +22,7 @@ class AnnouncementController extends Controller
                 
                 'announcement' => $request->announcement,
                 'subject' => $request->announcementtitle,
-                'to'=>['hanciewanemphago@gmail.com', 'nitesh0hamal@gmail.com','azzaya2060@gmail.com'],
+                'to'=>['hanciewanemphago@gmail.com', 'nitesh0hamal@gmail.com','azzaya2060@gmail.com','kcaveshesh123@gmail.com'],
                 
               ];
               
