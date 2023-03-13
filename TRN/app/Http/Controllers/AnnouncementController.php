@@ -19,17 +19,25 @@ class AnnouncementController extends Controller
             );
 
             $data = [
-                
                 'announcement' => $request->announcement,
                 'subject' => $request->announcementtitle,
-                'to'=>['hanciewanemphago@gmail.com', 'nitesh0hamal@gmail.com','azzaya2060@gmail.com','kcaveshesh123@gmail.com'],
-                
-              ];
-              
-              Mail::send('mail', $data, function($message) use ($data) {
-                $message->to($data['to']);
-                $message->subject($data['subject']);
-              });
+            ];
+            
+            $recipients = [
+                'hanciewanemphago@gmail.com',
+                'nitesh0hamal@gmail.com',
+                'azzaya2060@gmail.com',
+                'kcaveshesh123@gmail.com',
+            ];
+            
+            foreach ($recipients as $recipient) {
+                Mail::send('mail', $data, function($message) use ($recipient, $data) {
+                    $message->to($recipient);
+                    $message->subject($data['subject']);
+                });
+            }
+            
+            
 
             $announce=new AnnouncementModel;
             $announce->title=$request['announcementtitle'];
